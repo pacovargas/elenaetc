@@ -125,15 +125,23 @@ footer i.fa-facebook:hover{
   
   ul.nav{
     padding-left: 0;
-    padding-top: 11px;
+    padding-top: 35px;
+    margin-left: -5px
   }
   
   #menu-principal .navbar{
     padding-bottom: 110px !important;
+    padding-top: 5px;
+    
   }
   
   footer{
     font-size: 12px;
+  }
+  
+  .navbar-brand{
+    width: 150px !important;
+    padding-top: 8px;
   }
 }
 
@@ -150,6 +158,10 @@ footer i.fa-facebook:hover{
   footer{
     font-size: 12px;
     padding-top: 25px;
+  }
+  
+  ul.nav{
+    padding-top: 10px;
   }
 }
 
@@ -376,6 +388,100 @@ a:hover{
   text-decoration: none;
 }
 
-@mnedia (min-width: 1200px) and (max-width: 1265px){
+@media (min-width: 992px) and (max-width: 1199px){
+   #titulo-que-hacemos{
+    padding-left: 0;
+    transform: translate(-18px, 0px) !important;
+  }
   
+  .texto-que-hacemos-carr1{
+    font-size: 24px;
+  }
+  
+  .texto-que-hacemos-carr1 .logo-etc{
+    padding-top: 5px;
+  }
+  
+  .listado-que-hacemos-carr2{
+    font-size:16px;
+  }
+  
+  body.que-hacemos footer{
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  #titulo-que-hacemos{
+    padding-left: 0;
+    transform: translate(-9px, 0px) !important;
+  }
+  
+  .texto-que-hacemos-carr1{
+    font-size: 20px;
+  }
+  
+  .texto-que-hacemos-carr1 .logo-etc{
+    padding-top: 5px;
+  }
+  
+  .subtitulo{
+    font-size: 20px;
+  }
+  
+  #etcetera{
+    font-size: 12px;
+  }
+  
+  .subtexto-que-hacemos-carr1{
+    font-size: 16px;
+  }
+  
+  .listado-que-hacemos-carr2{
+    font-size:12.5px;
+  }
+}
+
+@media (max-width: 767px){
+  #titulo-que-hacemos img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  #titulo-que-hacemos{
+    margin-bottom: 5px;
+  }
+  
+  #etcetera{
+    font-size: 14px;
+    text-align: justify;
+  }
+  
+  .subtitulo{
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .texto-que-hacemos-carr1{
+    font-size: 14px;
+  }
+  
+  .texto-que-hacemos-carr1 img{
+    margin-bottom: 8px;
+  }
+  
+  .subtexto-que-hacemos-carr1{
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .listado-que-hacemos-carr2{
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .listado-que-hacemos-carr2 p{
+    margin-bottom: 15px;
+  }
 }

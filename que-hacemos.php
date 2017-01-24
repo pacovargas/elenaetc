@@ -14,7 +14,7 @@
 
 	<div class="container cuerpo">
 		<div class="row">
-			<div class="col-sm-3">
+			<div class="col-sm-3 hidden-xs">
 				<img src="img/logo-muneco.png" class="img-responsive center-block" />
 			</div>
 			<div class="col-sm-3" id="titulo-que-hacemos">
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 
-		<div class="row carrusel-individual">
+		<div class="row carrusel-individual hidden-xs">
 			<div class="col-xs-12 que-hacemos-carr1">
 				<div>
 					<img src="img/que-hacemos-carr1.jpg" class="img-responsive center-block" />
@@ -56,6 +56,40 @@
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Expedientes de VPO. Tramitación de Subvenciones y Rehabilitación.</p>
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión comercial de activos inmobiliarios (Comercialización e Intermediación).</p>
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Y todo lo demás que puedas necesitar, <a href="#">escríbenos</a> y estaremos encantados de ayudarte.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row visible-xs">
+			<div class="col-xs-12 que-hacemos-carr1">
+				<div>
+					<img src="img/que-hacemos-carr1.jpg" class="img-responsive center-block" />
+				</div>
+				<div class="text-center texto-que-hacemos-carr1 helvetica">
+					<div class="logo-etc">
+						<img src="img/logo-peque.png" alt="ETC" />
+					</div>
+					<div>
+						Le ofrece un completo catálogo de servicios en Consultoría Administrativa y de gestión especializada dentro del ámbito inmobiliario.
+						<hr />
+					</div>
+				</div>
+				<div class="subtexto-que-hacemos-carr1 text-center">
+					Para que te concentres en tu trabajo y nosotros nos ocupemos de <span class="naranja">&#8220;todo lo demás&#8221;</span>.
+				</div>
+			</div>
+			
+			<div class="col-xs-12 que-hacemos-carr2">
+				<div>
+					<img src="img/que-hacemos-carr2.jpg" class="img-responsive center-block" />
+				</div>
+				<div class="listado-que-hacemos-carr2 helvetica">
+					<hr />
+					<p>Gestión de Licencias, Permisos, Altas Catastrales y Tributos relacionados con el sector/actividad (ICIO, IBI, ETC.</p>
+					<p>Gestión de representación ante organismos públicos y/o privados (Ayuntamientos, Junta de Andalucía, AEAT, Notarías, ETC.</p>
+					<p>Expedientes de VPO. Tramitación de Subvenciones y Rehabilitación.</p>
+					<p>Gestión comercial de activos inmobiliarios (Comercialización e Intermediación).</p>
+					<p>Y todo lo demás que puedas necesitar, <a href="#">escríbenos</a> y estaremos encantados de ayudarte.</p>
 				</div>
 			</div>
 		</div>
