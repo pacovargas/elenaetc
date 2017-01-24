@@ -152,3 +152,17 @@ footer i.fa-facebook:hover{
     padding-top: 25px;
   }
 }
+
+.c2a-encargo-lg{
+  position: absolute;
+  top: 77px;
+  /*left: 1108px*/
+  right: -108px;
+}
+
+@media (min-width: 1200px) and (max-width: 1359px){
+  .c2a-encargo-lg{
+    right: -2px;
+    top: 0;
+  }
+}

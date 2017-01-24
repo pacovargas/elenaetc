@@ -34,6 +34,10 @@
 		      <li><a href="#">contacto</a></li>
 		    </ul>
 		  </div>
+
+			<div class="visible-lg c2a-encargo-lg">
+				<a href="#"><img src="img/c2a-encargo.png" alt="Rellene aquí la hoja de encargo" /></a>
+			</div>
 		</nav>
 	</div>
 
