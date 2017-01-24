@@ -47,8 +47,15 @@
 
 	<div class="container text-center">
 		<footer>
-			<div class="fila-footer">
+			<div class="fila-footer hidden-xs">
 				Elena Franco Álvarez<span class="separador"></span>Consultoría Administrativa Especializada<span class="separador"></span>+34 666 240 934<span class="separador"></span>www.elenaetc.es<span class="separador"></span>elena@elenaetc.es
+			</div>
+
+			<div class="fila-footer visible-xs textos-footer-movil text-left">
+				<p>Elena Franco Álvarez</p>
+				<p>Consultoría Administrativa Especializada</p>
+				<p>+34 666 240 934</p>
+				<p>www.elenaetc.es<span class="separador"></span>elena@elenaetc.es</p>
 			</div>
 
 			<div class="fila-footer">

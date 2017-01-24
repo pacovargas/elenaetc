@@ -98,3 +98,57 @@ footer i.fa-facebook:hover{
   text-decoration: none;
   opacity: 0.7;
 }
+
+.navbar-brand img{
+  max-width: 100%;
+}
+
+@media (min-width: 992px) and (max-width:1199px){
+  .navbar-header{
+    width: 180px;
+  }
+  
+  ul.nav{
+    padding-top: 22px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:991px){
+  .navbar-header{
+    width: 130px;
+  }
+  
+  ul.nav li a{
+    font-size: 12px;
+    padding: 15px 10px;
+  }
+  
+  ul.nav{
+    padding-left: 0;
+    padding-top: 11px;
+  }
+  
+  #menu-principal .navbar{
+    padding-bottom: 110px !important;
+  }
+  
+  footer{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 767px){
+  .textos-footer-movil p{
+    margin-bottom: 0;
+  }
+  
+  .textos-footer-movil{
+    border-left:  3px solid #cb4e2d;
+    padding-left: 15px;
+  }
+  
+  footer{
+    font-size: 12px;
+    padding-top: 25px;
+  }
+}
