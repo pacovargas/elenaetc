@@ -13,7 +13,7 @@
 	<div class="container cuerpo">
 		<div class="row text-center titulo">
 			<div class="col-xs-12">
-				<img src="img/titulo-principal.png" alt="ELENA FRANCO ÁLVAREZ" />
+				<img src="img/titulo-principal.png" alt="ELENA FRANCO ÁLVAREZ" class="img-responsive center-block" />
 			</div>
 		</div>
 
@@ -29,7 +29,7 @@
 
 				<p class="naranja">¿Está tu empresa? ¿Tienes recursos y medios suficientes? ¿Necesitas ayuda?</p>
 
-				<p class="text-right"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+				<p class="text-right centrado-movil"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
 			</div>
 
 			<div class="col-sm-5">

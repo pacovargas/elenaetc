@@ -239,3 +239,21 @@ footer i.fa-facebook:hover{
 .texto-principal i{
   margin-top: 30px;
 }
+
+@media (max-width: 767px){
+  .centrado-movil{
+    text-align: center;
+  }
+  
+  .texto-principal i{
+    margin-top: 5px;
+  }
+  
+  .titulo{
+    padding-bottom: 30px;
+  }
+  
+  footer{
+    margin-top: 40px;
+  }
+}
