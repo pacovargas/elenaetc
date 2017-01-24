@@ -47,3 +47,54 @@ ul.nav li.active a{
   background-color: transparent !important;
   color: black !important;
 }
+
+footer .separador{
+  border-right: 3px solid #cb4e2d;
+  margin: 0px 5px;
+}
+
+footer{
+  border-top: 1px solid black;
+  margin-top: 100px;
+  padding-top: 40px;
+}
+
+.fila-footer{
+  margin-bottom: 22px;
+}
+
+footer i{
+  font-size: 28px !important;
+  background-color: #ccc5ca;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  width: 48px;
+  height: 48px;
+}
+
+footer i.fa-instagram:hover{
+  background-color: black;
+}
+
+footer i.fa-twitter:hover{
+  background-color: #61BCF6;
+}
+
+footer i.fa-linkedin:hover{
+  background-color: #0077B5;
+}
+
+footer i.fa-facebook:hover{
+  background-color: #3B5998;
+}
+
+.enlaces-footer a{
+  padding: 0 7.5px;
+  color: #cb4e2d;
+}
+
+.enlaces-footer a:hover{
+  text-decoration: none;
+  opacity: 0.7;
+}
