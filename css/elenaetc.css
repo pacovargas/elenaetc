@@ -212,3 +212,30 @@ footer i.fa-facebook:hover{
 .navbar-toggle{
   background-color: white !important;
 }
+
+.titulo{
+  padding-top: 10px;
+  padding-bottom: 75px;
+}
+
+.naranja{
+  color: #CB4E2D;
+}
+
+.cuerpo i{
+  font-size: 28px !important;
+  background-color: #ccc5ca;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  width: 48px;
+  height: 48px;
+}
+
+.cuerpo i.fa-linkedin{
+  background-color: #0077B5;
+}
+
+.texto-principal i{
+  margin-top: 30px;
+}
