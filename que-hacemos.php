@@ -25,6 +25,11 @@
 				<p>1.expr. U. para sustituir el resto de una exposición o enumeración que se sobreentiende. Se emplea generalmente en la abreviatura etc.</p>
 			</div>
 		</div>
+
+		<div class="row carrusel-individual">
+			<div>hola</div>
+			<div>adios</div>
+		</div>
 	</div>
 
 	<?php include('includes/footer.html'); ?>
