@@ -198,6 +198,7 @@ footer i.fa-facebook:hover{
     width: 95px;
     padding-top: 5px;
     right: 0;
+    z-index: 10000;
   }
   
   .navbar-brand{
@@ -255,5 +256,11 @@ footer i.fa-facebook:hover{
   
   footer{
     margin-top: 40px;
+  }
+  
+  .navbar-collapse{
+    background-color: #CCC5CA !important;
+    z-index: 100000 !important;
+    position: relative;
   }
 }

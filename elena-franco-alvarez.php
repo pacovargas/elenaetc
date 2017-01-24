@@ -4,6 +4,8 @@
 <head>
     <title>Elena ETC - Consultoría Administrativa Especializada</title>
 
+    <script type="text/javascript">var menu_nbr = 1;</script>
+
     <?php include('includes/head.html'); ?>
 </head>
 
