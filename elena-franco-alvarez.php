@@ -38,6 +38,14 @@
 			<div class="visible-lg c2a-encargo-lg">
 				<a href="#"><img src="img/c2a-encargo.png" alt="Rellene aquí la hoja de encargo" /></a>
 			</div>
+
+			<div class="visible-sm visible-md c2a-encargo-md">
+				<a href="#"><img src="img/c2a-encargo-horizontal.png" alt="Rellene aquí la hoja de encargo" class="img-responsive" /></a>
+			</div>
+
+			<div class="visible-xs c2a-encargo-md">
+				<a href="#"><img src="img/c2a-encargo-movil.png" alt="Rellene aquí la hoja de encargo" class="img-responsive" /></a>
+			</div>
 		</nav>
 	</div>
 

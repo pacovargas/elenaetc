@@ -166,3 +166,49 @@ footer i.fa-facebook:hover{
     top: 0;
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .c2a-encargo-md{
+    position: absolute;
+    left: 685px;
+    top: 4px;
+  }
+  
+  .c2a-encargo-md img{
+    width: 73%
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .c2a-encargo-md{
+    position: absolute;
+    left: 516px;
+    top: 4px;
+    width: 180px;   
+  }
+  
+  .c2a-encargo-md img{
+    width: 87%
+  }
+}
+
+@media (max-width: 767px){
+  .c2a-encargo-md{
+    position: absolute;
+    width: 95px;
+    padding-top: 5px;
+    right: 0;
+  }
+  
+  .navbar-brand{
+    width: 200px;
+  }
+  
+  #menu-principal .navbar{
+   padding-top: 25px;
+  }
+}
+
+.navbar-toggle{
+  background-color: white !important;
+}
