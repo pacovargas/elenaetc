@@ -309,7 +309,7 @@ button.slick-next:before{
   content: "\f054";
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1265px){
   button.slick-prev{
     transform: translate(-20px, 0px)
   }
@@ -374,4 +374,8 @@ a:hover{
   color: #CB4E2D;
   opacity: 0.7;
   text-decoration: none;
+}
+
+@mnedia (min-width: 1200px) and (max-width: 1265px){
+  
 }
