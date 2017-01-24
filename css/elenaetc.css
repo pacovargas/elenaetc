@@ -264,3 +264,26 @@ footer i.fa-facebook:hover{
     position: relative;
   }
 }
+
+#etcetera{
+  font-size: 15px;
+}
+
+.subtitulo{
+  font-size: 22px;
+}
+
+#titulo-que-hacemos{
+  padding-top: 15px;
+}
+
+#etcetera{
+  padding-top: 11px;
+}
+
+@media (min-width: 1200px){
+  #titulo-que-hacemos{
+    padding-left: 0;
+    transform: translate(-17px, 0px);
+  }
+}

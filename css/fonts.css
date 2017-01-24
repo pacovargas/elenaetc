@@ -7,3 +7,21 @@
 	font-family: helvetica-bold;
 	src: url(../fonts/HelveticaNeue-Bold.ttf) format('truetype');
 }
+
+@font-face {
+	font-family: champan;
+	src: url(../fonts/Champagne.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: champan-bold;
+	src: url(../fonts/Champagne-Bold.ttf) format('truetype');
+}
+
+.champan{
+	font-family: champan;
+}
+
+.champan-bold{
+	font-family: champan-bold;
+}
