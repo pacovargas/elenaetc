@@ -9,7 +9,7 @@
     <?php include('includes/head.html'); ?>
 </head>
 
-<body>
+<body class="que-hacemos">
 	<?php include('includes/header.html'); ?>
 
 	<div class="container cuerpo">
@@ -27,8 +27,37 @@
 		</div>
 
 		<div class="row carrusel-individual">
-			<div>hola</div>
-			<div>adios</div>
+			<div class="col-xs-12 que-hacemos-carr1">
+				<div>
+					<img src="img/que-hacemos-carr1.jpg" class="img-responsive center-block" />
+				</div>
+				<div class="text-center texto-que-hacemos-carr1 helvetica">
+					<div class="float-left logo-etc">
+						<img src="img/logo-peque.png" alt="ETC" />
+					</div>
+					<div>
+						Le ofrece un completo catálogo de servicios en Consultoría Administrativa y de gestión especializada dentro del ámbito inmobiliario.
+						<hr />
+					</div>
+				</div>
+				<div class="subtexto-que-hacemos-carr1 text-center">
+					Para que te concentres en tu trabajo y nosotros nos ocupemos de <span class="naranja">&#8220;todo lo demás&#8221;</span>.
+				</div>
+			</div>
+			
+			<div class="col-xs-12 que-hacemos-carr2">
+				<div>
+					<img src="img/que-hacemos-carr2.jpg" class="img-responsive center-block" />
+				</div>
+				<div class="listado-que-hacemos-carr2 helvetica">
+					<hr />
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión de Licencias, Permisos, Altas Catastrales y Tributos relacionados con el sector/actividad (ICIO, IBI, <div class="reves float-left helvetica-bold">E</div><div class="float-left tc"><span class="gris">TC</span></div><span class="naranja">.</span>)</p>
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión de representación ante organismos públicos y/o privados (Ayuntamientos, Junta de Andalucía, AEAT, Notarías, <div class="reves float-left helvetica-bold">E</div><div class="float-left tc"><span class="gris">TC</span></div><span class="naranja">.</span>)</p>
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Expedientes de VPO. Tramitación de Subvenciones y Rehabilitación.</p>
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión comercial de activos inmobiliarios (Comercialización e Intermediación).</p>
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Y todo lo demás que puedas necesitar, <a href="#">escríbenos</a> y estaremos encantados de ayudarte.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
