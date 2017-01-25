@@ -82,10 +82,10 @@
                 <div class="titulo champan-bold mays">
                     Como <span class="naranja">lo</span> <span class="gris">hacemos</span>
                 </div>
-                <div class="text-right helvetica-bold-italic">
+                <div class="text-right helvetica-italic cita">
                     &#8220;La externalización de trámites como la gestión de una Licencia, un permiso, Alta de Bienes Inmuebles o la gestión de un activo en su conjunto, conlleva un ahorro de tiempo, coste y estructura para su empresa.&#8221;
                 </div>
-                <div class="text-right helvetica-light firma">
+                <div class="text-right helvetica-bold firma">
                     Elena Franco Álvarez CEO de ETC.
                 </div>
             </div>
@@ -167,10 +167,10 @@
                 </div>
             </div>
             <div class="col-sm-9 como-der">
-                <div class="text-right helvetica-bold-italic">
+                <div class="text-right helvetica-italic cita">
                     &#8220;La externalización de trámites como la gestión de una Licencia, un permiso, Alta de Bienes Inmuebles o la gestión de un activo en su conjunto, conlleva un ahorro de tiempo, coste y estructura para su empresa.&#8221;
                 </div>
-                <div class="text-right helvetica-light firma">
+                <div class="text-right helvetica-bold firma">
                     Elena Franco Álvarez CEO de ETC.
                 </div>
             </div>

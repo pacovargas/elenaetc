@@ -19,6 +19,11 @@
 }
 
 @font-face {
+	font-family: helvetica-italic;
+	src: url(../fonts/HelveticaNeue-Italic.ttf) format('truetype');
+}
+
+@font-face {
 	font-family: champan;
 	src: url(../fonts/Champagne.ttf) format('truetype');
 }
@@ -50,4 +55,8 @@
 
 .helvetica-bold-italic{
 	font-family: helvetica-bold-italic;
+}
+
+.helvetica-italic{
+	font-family: helvetica-italic;
 }

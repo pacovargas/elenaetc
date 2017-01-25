@@ -517,9 +517,9 @@ a:hover{
   margin-bottom: 15px;
 }
 
-.como-der .firma{
-  font-size: 16px;
-  margin-top: 20px;
+.firma{
+  font-size: 12px;
+  margin-top: 15px;
 }
 
 .como-carr2 p{
@@ -562,7 +562,7 @@ body.como-lo-hacemos footer{
     text-align: center;
   }
   
-  .como-der .firma{
+  .firma{
     margin-bottom: 20px;
   }
   
