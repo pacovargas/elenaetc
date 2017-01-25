@@ -924,4 +924,8 @@ body.encargo .c2a-encargo-lg{
   .encargo .entre-parentesis{
     padding-left: 0 !important;
   }
+  
+  .encargo input[type='checkbox']{
+    margin-top: 0;
+  }
 }
