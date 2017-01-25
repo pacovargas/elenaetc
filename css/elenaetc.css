@@ -716,6 +716,10 @@ body.para-quien-lo-hacemos footer{
   opacity: 0.7;
 }
 
+body.contacto footer{
+  margin-top: 0;
+}
+
 @media (min-width: 1200px){
   .contacto h2{
     padding-left: 15px;
@@ -729,5 +733,27 @@ body.para-quien-lo-hacemos footer{
   
   .contacto-der{
     padding-top: 145px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .contacto-der{
+    padding-top: 55px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .contacto-izq h2{
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px){
+  .contacto-izq h2{
+    margin-top: 0;
+  }
+  
+  .formulario-contacto-enviar{
+    text-align: right;
   }
 }
