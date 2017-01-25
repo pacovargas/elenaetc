@@ -77,15 +77,24 @@
                 <div class="muneco-como">
                     <img src="img/logo-muneco-bombilla.png" class="img-responsive" />
                 </div>
-                <div class="imagenes-como">
-                    <img src="img/como1.jpg" class="img-responsive" />
-                </div>
-                <div class="imagenes-como">
-                    <img src="img/como2.jpg" class="img-responsive" />
-                </div>
             </div>
             <div class="col-sm-9 como-der">
-                <div class="titulo champan-bold mays">Como <span class="naranja">lo</span> <span class="gris">hacemos</span></div>
+                <div class="titulo champan-bold mays">
+                    Como <span class="naranja">lo</span> <span class="gris">hacemos</span>
+                </div>
+                <div class="text-right helvetica-bold-italic">
+                    &#8220;La externalización de trámites como la gestión de una Licencia, un permiso, Alta de Bienes Inmuebles o la gestión de un activo en su conjunto, conlleva un ahorro de tiempo, coste y estructura para su empresa.&#8221;
+                </div>
+                <div class="text-right helvetica-light firma">
+                    Elena Franco Álvarez CEO de ETC.
+                </div>
+            </div>
+            <div class="col-sm-12 como-carr2-textos">
+                <p class="helvetica">En ETC nuestro principal objetivo es que el cliente continue con su trabajo y nosotros nos encargamos de todo los demás, así ofrecemos el mejor servicio con la mejor especialización.</p>
+                <p class="helvetica">Externalizar significa para nosotros la Optimización de Tiempo, Recursos y Costes de cara a nuestros clientes, además <span class="naranja helvetica-bold">somos flexibles y nos adaptamos a tu método de trabajo</span>.</p>
+            </div>
+            <div class="col-sm-12 como-carr2-imagenes">
+                <img src="img/relojes.jpg" class="img-responsive center-block" />
             </div>
         </div>
     </div>

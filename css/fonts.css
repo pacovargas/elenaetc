@@ -9,6 +9,11 @@
 }
 
 @font-face {
+	font-family: helvetica-bold-italic;
+	src: url(../fonts/HelveticaNeue-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
 	font-family: helvetica-light;
 	src: url(../fonts/HelveticaNeue-Light.ttf) format('truetype');
 }
@@ -41,4 +46,8 @@
 
 .helvetica-light{
 	font-family: helvetica-light;
+}
+
+.helvetica-bold-italic{
+	font-family: helvetica-bold-italic;
 }
