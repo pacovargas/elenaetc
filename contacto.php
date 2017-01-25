@@ -23,43 +23,45 @@
 				</div>
 			</div>
 			<div class="col-sm-6 contacto-der">
-				<div class="row linea-formulario-contacto">
-					<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
-						<label for="nombre" class="naranja helvetica">Nombre:</label>
+				<form id="fomulario-contacto">
+					<div class="row linea-formulario-contacto">
+						<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
+							<label for="nombre" class="naranja helvetica">Nombre:</label>
+						</div>
+						<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
+							<input type="text" name="nombre" id="nombre" />
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
-						<input type="text" name="nombre" id="nombre" />
+					<div class="row linea-formulario-contacto">
+						<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
+							<label for="nombre" class="naranja helvetica">Email:</label>
+						</div>
+						<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
+							<input type="text" name="email" id="email" />
+						</div>
 					</div>
-				</div>
-				<div class="row linea-formulario-contacto">
-					<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
-						<label for="nombre" class="naranja helvetica">Email:</label>
+					<div class="row linea-formulario-contacto">
+						<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
+							<label for="nombre" class="naranja helvetica">Asunto:</label>
+						</div>
+						<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
+							<input type="text" name="asunto" id="asunto" />
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
-						<input type="text" name="email" id="email" />
+					<div class="row linea-formulario-contacto">
+						<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
+							<label for="nombre" class="naranja helvetica">Mensaje:</label>
+						</div>
+						<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
+							<textarea name="mensaje" id="mensaje"></textarea>
+						</div>
 					</div>
-				</div>
-				<div class="row linea-formulario-contacto">
-					<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
-						<label for="nombre" class="naranja helvetica">Asunto:</label>
+					<div class="row linea-formulario-contacto">
+						<div class="col-sm-offset-3 col-sm-9 formulario-contacto-campo formulario-contacto-enviar">
+							<input type="submit" name="enviar" id="enviar" value="Enviar" class="boton" />
+						</div>
 					</div>
-					<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
-						<input type="text" name="asunto" id="asunto" />
-					</div>
-				</div>
-				<div class="row linea-formulario-contacto">
-					<div class="col-xs-12 col-sm-3 formulario-contacto-etiqueta">
-						<label for="nombre" class="naranja helvetica">Mensaje:</label>
-					</div>
-					<div class="col-xs-12 col-sm-9 formulario-contacto-campo">
-						<textarea name="mensaje" id="mensaje"></textarea>
-					</div>
-				</div>
-				<div class="row linea-formulario-contacto">
-					<div class="col-sm-offset-3 col-sm-9 formulario-contacto-campo formulario-contacto-enviar">
-						<input type="submit" name="enviar" id="enviar" value="Enviar" class="boton" />
-					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 	</div>

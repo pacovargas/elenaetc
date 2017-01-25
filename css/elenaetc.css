@@ -710,6 +710,8 @@ body.para-quien-lo-hacemos footer{
   color: white;
   width: auto !important;
   padding: 10px 50px !important;
+  font-family: helvetica-bold;
+  font-size: 14px;
 }
 
 .boton:hover{
@@ -781,5 +783,107 @@ body.textos footer{
   .textos h2{
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1800px){
+  body.textos .row > div{
+    overflow-y: auto;
+    height: 530px;
+  }
+}
+
+body.encargo input{
+  border: none;
+  border-bottom: 2px dotted #CB4E2D;
+  padding-left: 8px;
+}
+
+body.encargo h2,
+body.encargo{
+  font-size: 18px;
+}
+
+span.nombre-campo{
+  position: relative;
+  top: 10px;
+}
+
+.encargo .aclaracion{
+  font-size: 18px;
+}
+
+.minus{
+  text-transform: lowercase;
+}
+
+.encargo input[type='checkbox']{
+  position: relative;
+  top: 13px;
+}
+
+.encargo .entre-parentesis{
+  padding-left: 20px;
+}
+
+.encargo textarea{
+  border: 1px solid #8C8685;
+  width: 100%;
+  height: 175px;
+}
+
+body.encargo footer{
+  margin-top: 40px;
+}
+
+body.encargo .c2a-encargo-md,
+body.encargo .c2a-encargo-lg{
+  display: none !important;
+}
+
+@media (min-width: 1200px){
+  .encargo #nombre,
+  .encargo #apellidos{
+    width: 498px;
+  }
+  
+  .encargo #empresa{
+    width: 1075px;
+  }
+  
+  .encargo #direccion{
+    width: 520px;
+  }
+  
+  .encargo #localidad{
+    width: 450px;
+  }
+  
+  .encargo #telefono{
+    width: 200px;
+  }
+  
+  .encargo #email{
+    width: 682px;
+  }
+  
+  .encargo #vivienda{
+    width: 1050px;
+  }
+  
+  .encargo #local{
+    width: 975px;
+  }
+  
+  .encargo #promocion{
+    width: 1017px;
+  }
+  
+  .encargo #suelo{
+    width: 1070px;
+  }
+  
+  .encargo #otros{
+    width: 1065px;
   }
 }
