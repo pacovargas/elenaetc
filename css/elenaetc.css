@@ -485,3 +485,33 @@ a:hover{
     margin-bottom: 15px;
   }
 }
+
+.mays{
+  text-transform: uppercase;
+}
+
+.muneco-como{
+  margin-bottom: 35px;
+}
+
+.imagenes-como{
+  margin-bottom: 5px;
+}
+
+.como-der .titulo{
+  font-size: 38px;
+  padding-bottom: 0;
+}
+
+.como-izq{
+  width: 22% 
+}
+
+.como-der{
+  width: 78%;
+}
+
+.punto-como{
+  font-size: 20px;
+  margin-bottom: 15px;
+}

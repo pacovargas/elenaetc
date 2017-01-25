@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Elena ETC - Consultoría Administrativa Especializada</title>
+
+    <script type="text/javascript">var menu_nbr = 3;</script>
+
+    <?php include('includes/head.html'); ?>
+</head>
+
+<body class="que-hacemos">
+    <?php include('includes/header.html'); ?>
+
+    <div class="container cuerpo carrusel-individual">
+        <div class="row como-carr1">
+            <div class="col-sm-3 como-izq hidden-xs">
+                <div class="muneco-como">
+                    <img src="img/logo-muneco-bombilla.png" class="img-responsive" />
+                </div>
+                <div class="imagenes-como">
+                    <img src="img/como1.jpg" class="img-responsive" />
+                </div>
+                <div class="imagenes-como">
+                    <img src="img/como2.jpg" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-sm-9 como-der">
+                <div class="titulo champan-bold mays">
+                    Como <span class="naranja">lo</span> <span class="gris">hacemos</span>
+                </div>
+                <hr />
+
+                <div class="punto-como helvetica-light mays">
+                    <span class="naranja">01</span>.¿Qué podemos hacer por ti?
+                </div>
+                <div class="explicacion-como">
+                    Detección/Diagnóstico de necesidades del cliente. Hoja de encargo a rellenar por el cliente a través de un formulario.
+                </div>
+                <hr />
+
+                <div class="punto-como helvetica-light mays">
+                    <span class="naranja">02</span>.Contacto personal
+                </div>
+                <div class="explicacion-como">
+                    Primera toma de contacto.
+                </div>
+                <hr />
+
+                <div class="punto-como helvetica-light mays">
+                    <span class="naranja">03</span>.En marcha
+                </div>
+                <div class="explicacion-como">
+                    Formalización de la contratación de servicios entre el cliente y ETC.
+                </div>
+                <hr />
+
+                <div class="punto-como helvetica-light mays">
+                    <span class="naranja">04</span>.Seguimiento
+                </div>
+                <div class="explicacion-como">
+                    ETC. se encarga del seguimiento total de todos los trámites e informa al cliente del proceso y tiempos.
+                </div>
+                <hr />
+
+                <div class="punto-como helvetica-light mays">
+                    <span class="naranja">05</span>.Resultados
+                </div>
+                <div class="explicacion-como">
+                    Ya es realidad su ahorro en tiempo y costes, ETC. le hace entrega de toda la documentación relativa a su expediente con la tranquilidad de tenerlos en tiempo y forma según lo acordado en la hoja de encargo.
+                </div>
+            </div>
+        </div>
+
+        <div class="row como-carr2">
+            <div class="col-sm-3 como-izq hidden-xs">
+                <div class="muneco-como">
+                    <img src="img/logo-muneco-bombilla.png" class="img-responsive" />
+                </div>
+                <div class="imagenes-como">
+                    <img src="img/como1.jpg" class="img-responsive" />
+                </div>
+                <div class="imagenes-como">
+                    <img src="img/como2.jpg" class="img-responsive" />
+                </div>
+            </div>
+            <div class="col-sm-9 como-der">
+                <div class="titulo champan-bold mays">Como <span class="naranja">lo</span> <span class="gris">hacemos</span></div>
+            </div>
+        </div>
+    </div>
+
+    <?php include('includes/footer.html'); ?>
+</body>
+</html>

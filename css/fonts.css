@@ -9,6 +9,11 @@
 }
 
 @font-face {
+	font-family: helvetica-light;
+	src: url(../fonts/HelveticaNeue-Light.ttf) format('truetype');
+}
+
+@font-face {
 	font-family: champan;
 	src: url(../fonts/Champagne.ttf) format('truetype');
 }
@@ -32,4 +37,8 @@
 
 .helvetica-bold{
 	font-family: helvetica-bold;
+}
+
+.helvetica-light{
+	font-family: helvetica-light;
 }
