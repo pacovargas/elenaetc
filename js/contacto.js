@@ -3,7 +3,6 @@ var errores = "";
 function validaFormularioContacto(){
 	var valido = true;
 	var email = $('#email').val();
-	console.log(email);
 
 	if(email === ""){
 		valido = false;
@@ -31,7 +30,7 @@ $(function(){
 			var to = "fvargasestrada@gmail.com";
 			var subject = "Pruebas elenaetc";
 			var message = "Hola probando";
-			
+
 			$.post(
 			"send-mail.php",
 			{to: to, subject: subject, message: message},
