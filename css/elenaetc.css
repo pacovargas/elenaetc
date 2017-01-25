@@ -799,14 +799,14 @@ body.encargo input{
   padding-left: 8px;
 }
 
-body.encargo h2,
-body.encargo text{
+body.encargo h2{
   font-size: 18px;
 }
 
 span.nombre-campo{
   position: relative;
   top: 10px;
+  font-size: 18px;
 }
 
 .encargo .aclaracion{
