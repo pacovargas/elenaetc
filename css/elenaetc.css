@@ -109,7 +109,7 @@ footer i.fa-facebook:hover{
   }
   
   ul.nav{
-    padding-top: 22px;
+    padding-top: 30px;
   }
 }
 
@@ -126,7 +126,8 @@ footer i.fa-facebook:hover{
   ul.nav{
     padding-left: 0;
     padding-top: 35px;
-    margin-left: -5px
+    margin-left: -10px;
+    width: 100%;
   }
   
   #menu-principal .navbar{
@@ -524,4 +525,49 @@ a:hover{
 .como-carr2 p{
   font-size: 24px;
   margin-bottom: 25px;
+}
+
+body.como-lo-hacemos footer{
+    margin-top: 20px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .como-carr2 p{
+    font-size: 20px;
+  }
+  
+  body.como-lo-hacemos footer{
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .como-carr2 p{
+    font-size: 16px;
+    text-align: justify;
+  }
+  
+  body.como-lo-hacemos footer{
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767px){
+  .como-der{
+    width: 100%;
+  }
+  
+  .como-der .titulo{
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .como-der .firma{
+    margin-bottom: 20px;
+  }
+  
+  .como-carr2 p{
+    font-size: 14px;
+    text-align: justify;
+  }
 }
