@@ -55,7 +55,7 @@
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión de representación ante organismos públicos y/o privados (Ayuntamientos, Junta de Andalucía, AEAT, Notarías, <div class="reves float-left helvetica-bold">E</div><div class="float-left tc"><span class="gris">TC</span></div><span class="naranja">.</span>)</p>
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Expedientes de VPO. Tramitación de Subvenciones y Rehabilitación.</p>
 					<p class="float-left"><span class="naranja helvetica-bold">/</span> Gestión comercial de activos inmobiliarios (Comercialización e Intermediación).</p>
-					<p class="float-left"><span class="naranja helvetica-bold">/</span> Y todo lo demás que puedas necesitar, <a href="#">escríbenos</a> y estaremos encantados de ayudarte.</p>
+					<p class="float-left"><span class="naranja helvetica-bold">/</span> Y todo lo demás que puedas necesitar, <a href="contacto.php">escríbenos</a> y estaremos encantados de ayudarte.</p>
 				</div>
 			</div>
 		</div>
@@ -89,7 +89,7 @@
 					<p>Gestión de representación ante organismos públicos y/o privados (Ayuntamientos, Junta de Andalucía, AEAT, Notarías, ETC.</p>
 					<p>Expedientes de VPO. Tramitación de Subvenciones y Rehabilitación.</p>
 					<p>Gestión comercial de activos inmobiliarios (Comercialización e Intermediación).</p>
-					<p>Y todo lo demás que puedas necesitar, <a href="#">escríbenos</a> y estaremos encantados de ayudarte.</p>
+					<p>Y todo lo demás que puedas necesitar, <a href="contacto.php">escríbenos</a> y estaremos encantados de ayudarte.</p>
 				</div>
 			</div>
 		</div>

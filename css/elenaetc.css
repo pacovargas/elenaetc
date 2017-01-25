@@ -800,7 +800,7 @@ body.encargo input{
 }
 
 body.encargo h2,
-body.encargo{
+body.encargo text{
   font-size: 18px;
 }
 
@@ -829,7 +829,7 @@ span.nombre-campo{
 .encargo textarea{
   border: 1px solid #8C8685;
   width: 100%;
-  height: 175px;
+  height: 146px;
 }
 
 body.encargo footer{
@@ -839,6 +839,10 @@ body.encargo footer{
 body.encargo .c2a-encargo-md,
 body.encargo .c2a-encargo-lg{
   display: none !important;
+}
+
+.encargo .boton{
+  margin-top: 10px;
 }
 
 @media (min-width: 1200px){
@@ -885,5 +889,34 @@ body.encargo .c2a-encargo-lg{
   
   .encargo #otros{
     width: 1065px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .encargo input[type='text']{
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .encargo input[type='text']{
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .encargo .entre-parentesis{
+    padding-left: 5px !important;
+  }
+}
+
+@media (max-width: 767px){
+  .encargo input[type='text']{
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  .encargo .entre-parentesis{
+    padding-left: 0 !important;
   }
 }
