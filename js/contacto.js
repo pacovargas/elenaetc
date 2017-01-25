@@ -27,9 +27,12 @@ $(function(){
 			errores = "";
 		}
 		else{
-			var to = "fvargasestrada@gmail.com";
-			var subject = "Pruebas elenaetc";
-			var message = "Hola probando";
+			var to = "elena@elenaetc.es";
+			var subject = "Mensaje desde formulario de contacto de elenaetc.es";
+			var message = "Nombre: " + $('#nombre').val() + "\n";
+			var message = message + "Email: " + $('#email').val() + "\n";
+			var message = message + "Asunto: " + $('#asunto').val() + "\n";
+			var message = message + "Mensaje: " + $('#mensaje').val() + "\n";
 
 			$.post(
 			"send-mail.php",
