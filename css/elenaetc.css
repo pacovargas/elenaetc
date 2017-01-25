@@ -499,9 +499,14 @@ a:hover{
   margin-bottom: 5px;
 }
 
-.como-der .titulo{
+.como-der .titulo,
+.para-der .titulo{
   font-size: 38px;
   padding-bottom: 0;
+}
+
+.para-der .titulo{
+  margin-bottom: 20px;
 }
 
 .como-izq{
@@ -531,6 +536,10 @@ body.como-lo-hacemos footer{
     margin-top: 20px;
 }
 
+.cita{
+  font-size: 16px;
+}
+
 @media (min-width: 992px) and (max-width: 1199px){
   .como-carr2 p{
     font-size: 20px;
@@ -538,6 +547,10 @@ body.como-lo-hacemos footer{
   
   body.como-lo-hacemos footer{
     margin-top: 30px;
+  }
+  
+  .cita{
+    font-size: 14px;
   }
 }
 
@@ -549,6 +562,10 @@ body.como-lo-hacemos footer{
   
   body.como-lo-hacemos footer{
     margin-top: 30px;
+  }
+  
+  .cita{
+    font-size: 14px;
   }
 }
 
@@ -569,5 +586,90 @@ body.como-lo-hacemos footer{
   .como-carr2 p{
     font-size: 14px;
     text-align: justify;
+  }
+}
+
+.para-izq{
+  width: 22%;
+}
+
+.para-der{
+  width: 78%;
+}
+
+.para-der .cita{
+  padding-left: 34%;
+}
+
+.para-listado-separador{
+  border-bottom: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+body.para-quien-lo-hacemos hr{
+  margin-bottom: 0;
+}
+
+.para-listado-texto h2{
+  margin-bottom:15px;
+}
+
+.para-listado-texto p{
+  font-size: 15px;
+}
+
+body.para-quien-lo-hacemos footer{
+  margin-top: 50px;
+}
+
+.negro{
+  color: black;
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .para-listado-texto p{
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+  .para-listado-texto p{
+    font-size: 12px;
+  }
+  
+  .para-listado h2{
+    font-size: 24px;
+  }
+  
+  .para-der .titulo{
+    font-size: 30px;
+  }
+  
+  .para-der .cita{
+    padding-left: 10%
+  }
+}
+
+@media (max-width: 767px){
+  .para-der{
+    width: 100%;
+  }
+  
+  .para-der .titulo{
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  .para-der .cita{
+    padding-left: 0;
+  }
+  
+  .para-listado-texto h2{
+    font-size: 21px;
+  }
+  
+  .para-listado-texto p{
+    font-size: 14px;
   }
 }
