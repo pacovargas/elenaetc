@@ -35,7 +35,7 @@
                     <span class="naranja">01</span>.¿Qué podemos hacer por ti?
                 </div>
                 <div class="explicacion-como">
-                    Detección/Diagnóstico de necesidades del cliente. Hoja de encargo a rellenar por el cliente a través de un formulario.
+                    Detección/Diagnóstico de necesidades del cliente. Rellene usted la solicitud de información para conocer mejor su caso.
                 </div>
                 <hr />
 
