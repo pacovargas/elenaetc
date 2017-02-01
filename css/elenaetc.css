@@ -623,7 +623,8 @@ body.para-quien-lo-hacemos hr{
 }
 
 body.para-quien-lo-hacemos footer{
-  margin-top: 50px;
+  margin-top: 0;
+  border-top: none;
 }
 
 .negro{
@@ -935,3 +936,9 @@ body.encargo .c2a-encargo-lg{
 .titulo-pagina h2{
   font-size: 35px;
 }
+
+.para-listado-texto p{
+  border-bottom: 1px solid black;
+  padding-bottom: 20px;
+}
+

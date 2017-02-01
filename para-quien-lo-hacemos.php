@@ -43,7 +43,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/profesionales-tecnicos.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Promotoras Inmobiliarias</h2>
                 <p>Porque concentrar trámites especializados a través de ETC. mientras vuelca sus esfuerzos en la promoción de sus inmuebles.</p>
@@ -51,7 +50,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/promotoras-inmobiliarias.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Constructoras</h2>
                 <p>Porque grandes proyectos requieren soluciones que ahorren costes y tiempo.</p>
@@ -59,7 +57,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/constructuras.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Entidades Financieras</h2>
                 <p>Porque minimiza los riesgos derivados en coste y tiempo de la falta de especialización del ámbito inmobiliario.</p>
@@ -77,7 +74,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/comunidades.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Establecimientos Comerciales</h2>
                 <p>Porque seas un pequeño comercio, una oficina mediana o una gran empresa, encontramos soluciones a tu medida.</p>
@@ -85,7 +81,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/establecimientos.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Particulares</h2>
                 <p>Porque su proyecto particular, sus ilusiones o sueños... en ETC. los analizamos y convertimos en realidad.</p>
@@ -93,7 +88,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/particulares.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Etcétera...</h2>
                 <p>Si su perfil no está aquí, no dude en contactar con nosotros para conocer sus necesidades específicas.</p>
@@ -113,7 +107,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/profesionales-tecnicos.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Promotoras Inmobiliarias</h2>
                 <p>Porque concentrar trámites especializados a través de ETC. mientras vuelca sus esfuerzos en la promoción de sus inmuebles.</p>
@@ -121,7 +114,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/promotoras-inmobiliarias.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Constructoras</h2>
                 <p>Porque grandes proyectos requieren soluciones que ahorren costes y tiempo.</p>
@@ -129,7 +121,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/constructuras.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Entidades Financieras</h2>
                 <p>Porque minimiza los riesgos derivados en coste y tiempo de la falta de especialización del ámbito inmobiliario.</p>
@@ -147,7 +138,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/comunidades.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Establecimientos Comerciales</h2>
                 <p>Porque seas un pequeño comercio, una oficina mediana o una gran empresa, encontramos soluciones a tu medida.</p>
@@ -155,7 +145,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/establecimientos.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Particulares</h2>
                 <p>Porque su proyecto particular, sus ilusiones o sueños... en ETC. los analizamos y convertimos en realidad.</p>
@@ -163,7 +152,6 @@
             <div class="col-md-2 para-listado-icono para-listado hidden-xs hidden-sm">
                 <img src="img/particulares.png" class="img-responsive center-block" />
             </div>
-            <div class="col-xs-12 para-listado para-listado-separador"></div>
             <div class="col-xs-12 col-sm-12 col-md-10 para-listado para-listado-texto">
                 <h2 class="naranja helvetica-light">Etcétera...</h2>
                 <p>Si su perfil no está aquí, no dude en contactar con nosotros para conocer sus necesidades específicas.</p>
