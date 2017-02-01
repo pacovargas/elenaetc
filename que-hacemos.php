@@ -17,8 +17,8 @@
 			<div class="col-sm-3 hidden-xs">
 				<img src="img/logo-muneco.png" class="img-responsive center-block" />
 			</div>
-			<div class="col-sm-3" id="titulo-que-hacemos">
-				<img src="img/titulo-que-hacemos.png" class="img-responsive" alt="QUE HACEMOS" />
+			<div class="col-sm-3 titulo-pagina" id="titulo-que-hacemos">
+				<h2 class="mays champan-bold no-margin-top">Qu<span class='naranja'>é</span> <span class="gris">hacemos</span></h2>
 			</div>
 			<div class="col-sm-6 champan-bold" id="etcetera">
 				<p class="subtitulo"><span class="naranja mays">ETC</span> Del lat. et ceterea &#8220;y todo lo demás&#8221;.</p>

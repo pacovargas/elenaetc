@@ -929,3 +929,11 @@ body.encargo .c2a-encargo-lg{
     margin-top: 0;
   }
 }
+
+.no-margin-top{
+  margin-top: 0 !important;
+}
+
+.titulo-pagina h2{
+  font-size: 35px;
+}

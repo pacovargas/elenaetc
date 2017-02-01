@@ -27,7 +27,7 @@
             </div>
             <div class="col-sm-9 como-der">
                 <div class="titulo champan-bold mays">
-                    Como <span class="naranja">lo</span> <span class="gris">hacemos</span>
+                    Cómo <span class="naranja">lo</span> <span class="gris">hacemos</span>
                 </div>
                 <hr />
 

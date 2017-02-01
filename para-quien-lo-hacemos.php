@@ -21,7 +21,7 @@
             </div>
             <div class="col-sm-9 para-der">
                 <div class="titulo champan-bold mays">
-                    Para <span class="naranja">quien</span> lo <span class="gris">hacemos,</span> por qué
+                    Para <span class="naranja">quién</span> lo <span class="gris">hacemos,</span> por qué
                 </div>
                 <div class="text-right helvetica-italic cita">
                     &#8220;ETC. le ofrece un beneficio emocional al despreocuparse y liberarse de trámites a través de nuestra asesoría administrativa especializada.&#8221;
