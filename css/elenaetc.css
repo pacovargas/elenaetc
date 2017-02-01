@@ -313,13 +313,11 @@ button.slick-arrow{
 }
 
 button.slick-prev:before{
-  font-family: FontAwesome;
-  content: "\f053";
+  content: url(../img/chevron-left.png);
 }
 
 button.slick-next:before{
-  font-family: FontAwesome;
-  content: "\f054";
+  content: url(../img/chevron-right.png);
 }
 
 @media (min-width: 1265px){
