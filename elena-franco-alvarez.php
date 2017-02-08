@@ -31,7 +31,7 @@
 
 				<p class="naranja">¿Está tu empresa preparada? ¿Tienes recursos y medios suficientes? ¿Necesitas ayuda?</p>
 
-				<p class="text-right centrado-movil"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
+				<p class="text-right centrado-movil"><a href="https://www.linkedin.com/in/elena-franco-alvarez-b1530740"><i class="fa fa-linkedin" aria-hidden="true"></i></a></p>
 			</div>
 
 			<div class="col-sm-5">
