@@ -115,17 +115,18 @@ function enviaSolicitud(){
 		var message = message + "-Facility management\n";
 
 	$.post(
-	"send-mail.php",
-	{to: to, subject: subject, message: message},
-	function(data){
-		if (data === "enviado"){
-			alert('Muchas gracias. Su solicitud ha sido enviada');
-		}
+		"send-mail.php",
+		{to: to, subject: subject, message: message},
+		function(data){
+			if (data === "enviado"){
+				alert('Muchas gracias. Su solicitus ha sido enviada');
+			}
 
-		else{
-			alert('Su solicitud no se ha podido enviar. Pruebe de nuevo pasados unos minutos');
+			else{
+				alert('Su solicitus no se ha podido enviar. Pruebe de nuevo pasados unos minutos');
+			}
 		}
-	}
+	);
 
 	console.log(message);
 }
