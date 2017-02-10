@@ -40,7 +40,8 @@ function muestraErroresSolicitud(errores){
 }
 
 function enviaSolicitud(){
-	var to = "fvargasestrada@gmail.com";
+	var to = "elena@elenaetc.es";
+	// var to = "fvargasestrada@gmail.com";
 	var subject = "Solicitud de información desde elenaetc.es";
 	var message = "Nombre: " + $('#nombre').val() + "\n";
 	var message = message + "Apellidos: " + $('#apellidos').val() + "\n";
@@ -114,21 +115,22 @@ function enviaSolicitud(){
 	if(validarCheckbox('#check-facility'))
 		var message = message + "-Facility management\n";
 
+	if($('#comentarios').val().length > 0)
+		var message = message + "\nCOMENTARIOS\n\n" + $('#comentarios').val() + "\n";
+
 	$.post(
 		"send-mail.php",
 		{to: to, subject: subject, message: message},
 		function(data){
 			if (data === "enviado"){
-				alert('Muchas gracias. Su solicitus ha sido enviada');
+				alert('Muchas gracias. Su solicitud ha sido enviada');
 			}
 
 			else{
-				alert('Su solicitus no se ha podido enviar. Pruebe de nuevo pasados unos minutos');
+				alert('Su solicitud no se ha podido enviar. Pruebe de nuevo pasados unos minutos');
 			}
 		}
 	);
-
-	console.log(message);
 }
 
 $(function(){
