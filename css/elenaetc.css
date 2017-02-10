@@ -942,3 +942,10 @@ body.encargo .c2a-encargo-lg{
   padding-bottom: 20px;
 }
 
+.errores{
+  border: 2px dotted #CB4E2D;
+  background-color: rgba(203, 78, 45, 0.4);
+  color: rgba(0, 0, 0, 0.7);
+  padding-top: 10px;
+  display: none;
+}

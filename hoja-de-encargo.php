@@ -14,6 +14,12 @@
 
 	<div class="container cuerpo">
 		<div class="row">
+			<div class="col-xs-12 errores" id="errores-solicitud">
+				
+			</div>
+		</div>
+
+		<div class="row">
 			<form id="formulario-encargo">
 				<div class="col-xs-12 mays champan">
 					<h2 class="naranja mays champan-bold">Solicitante</h2>
@@ -58,7 +64,7 @@
 
 					<div class="row">
 						<div class="col-md-7">
-							<h2 class="naranja mays champan-bold">Que necesita de etc <span class="negro minus champan-bold aclaracion">(marque el tipo de gestión que necesita)</span></h2>
+							<h2 class="naranja mays champan-bold">Qué necesita de etc <span class="negro minus champan-bold aclaracion">(marque el tipo de gestión que necesita)</span></h2>
 
 							<div>
 								<input type="checkbox" name="check-licencias" id="check-licencias" />
