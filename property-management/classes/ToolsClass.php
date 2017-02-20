@@ -34,4 +34,24 @@ class Tools{
 
         return $name;
     }
+
+    public static function getCurrentUrl($params=false){
+  		if($params){
+	  		return sprintf(
+				"%s://%s-%s",
+				isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+				$_SERVER['SERVER_NAME'],
+				dirname($_SERVER["REQUEST_URI"].'?').'/'
+			);
+		}
+		else{
+			return sprintf(
+				"%s://%s-%s",
+				isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+				$_SERVER['SERVER_NAME'],
+				$_SERVER["REQUEST_URI"]
+			);	
+		}
+
+    }
 }
