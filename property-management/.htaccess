@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^([^/]*)/$ index.php?controller=$1 [L]
+RewriteRule ^([^/]*)/([^/]*)$ index.php?controller=$1&$2 [L]
