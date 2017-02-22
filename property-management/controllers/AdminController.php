@@ -1,0 +1,31 @@
+<?php
+class AdminController extends Controller{
+	
+	private $db;
+	
+	public function __construct(){
+		// $this->head = "head.tpl";
+		// $this->header = "header.tpl";
+		// $this->footer = "footer.tpl";
+		// $this->db = new DataBase();
+
+		// $this->css_files = array(
+		// 	"index.css",
+		// );
+
+		// $this->js_files = array(
+		// 	"index.js",
+		// );
+
+		parent::__construct();
+	}
+
+	public function initContent(){
+		// $this->smarty->assign('prueba', Tools::getValue('prueba'));
+		// $this->tpl = "test.tpl";
+		if(User::isLogged())
+			$this->tpl = "admin.tpl";
+		else
+			$this->tpl = "login.tpl";
+	}	
+}

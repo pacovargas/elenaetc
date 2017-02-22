@@ -18,7 +18,7 @@ class TestController extends Controller{
 	}
 
 	public function initContent(){
-		$this->smarty->assign("prueba", Tools::getValue("prueba"));
+		$this->smarty->assign('prueba', Tools::getValue('prueba'));
 		$this->tpl = "test.tpl";
 	}	
 }
