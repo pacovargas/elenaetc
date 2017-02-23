@@ -58,11 +58,18 @@ class Controller{
 		$css = "";
 		$base_url = Tools::getBaseUrl();
 
-		if(is_array($files))
+		$url = $base_url . "css/global.css";
+		$css .= "<link rel='stylesheet' href='$url' type='text/css'>";
+
+
+		if(is_array($files)){
 			foreach ($files as $file){
 				$url = $base_url . "css/$file";
 				$css .= "<link rel='stylesheet' href='$url' type='text/css'>";
 			}
+		}
+
+
 
 		$this->smarty->assign("css", $css);
 	}
