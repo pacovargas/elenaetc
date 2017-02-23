@@ -15,6 +15,8 @@ class Controller{
 	public function __construct(){
 		$this->smarty = new Smarty;
 
+		$this->smarty->assign('base_url', Tools::getBaseUrl());
+
 		$this->addCSS($this->css_files);
 		$this->addJS($this->js_files);
 
@@ -54,20 +56,26 @@ class Controller{
 
 	protected function addCSS($files){
 		$css = "";
+		$base_url = Tools::getBaseUrl();
 
 		if(is_array($files))
-			foreach ($files as $file)
-				$css .= "<link rel='stylesheet' href='css/$file' type='text/css'>";
+			foreach ($files as $file){
+				$url = $base_url . "css/$file";
+				$css .= "<link rel='stylesheet' href='$url' type='text/css'>";
+			}
 
 		$this->smarty->assign("css", $css);
 	}
 
 	protected function addJS($files){
 		$js = "";
+		$base_url = Tools::getBaseUrl();
 
 		if(is_array($files))
-			foreach ($files as $file)
-				$js .= "<script src='js/$file'></script>";
+			foreach ($files as $file){
+				$url = $base_url . "js/$file";
+				$js .= "<script src='$url'></script>";
+			}
 
 		$this->smarty->assign("js", $js);
 	}

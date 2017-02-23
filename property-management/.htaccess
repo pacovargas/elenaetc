@@ -1,2 +1,4 @@
 RewriteEngine On
+RewriteCond %{REQUEST_URI} !/img/ [NC]
+RewriteCond %{REQUEST_URI} !/css/ [NC]
 RewriteRule ^([^/]*)/([^/]*)$ index.php?controller=$1&$2 [L]

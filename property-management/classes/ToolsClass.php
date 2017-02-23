@@ -54,4 +54,26 @@ class Tools{
 		}
 
     }
+
+    public static function getBaseUrl(){
+        $dirs = $_SERVER["REQUEST_URI"];
+        $dirs = rtrim($dirs, "/");
+        $dirs = ltrim($dirs, "/");
+        $exploded = explode("/", $dirs);
+        if(strpos($exploded[count($exploded)-1], "=") === false)
+            $exploded = array_slice($exploded, 0, count($exploded) - 1);
+        else
+            $exploded = array_slice($exploded, 0, count($exploded) - 2);
+        
+        $dirs = "/";
+        foreach ($exploded as $dir)
+            $dirs .= "$dir/";
+
+        return sprintf(
+            "%s://%s%s",
+            isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+            $_SERVER['SERVER_NAME'],
+            $dirs
+        );  
+    }
 }

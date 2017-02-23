@@ -4,14 +4,14 @@ class AdminController extends Controller{
 	private $db;
 	
 	public function __construct(){
-		// $this->head = "head.tpl";
-		// $this->header = "header.tpl";
-		// $this->footer = "footer.tpl";
-		// $this->db = new DataBase();
+		$this->display_header = false;
+		$this->display_footer = false;
+		
+		$this->db = new DataBase();
 
-		// $this->css_files = array(
-		// 	"index.css",
-		// );
+		$this->css_files = array(
+			"index.css",
+		);
 
 		// $this->js_files = array(
 		// 	"index.js",
