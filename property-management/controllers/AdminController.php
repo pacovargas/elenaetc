@@ -13,9 +13,9 @@ class AdminController extends Controller{
 			"index.css",
 		);
 
-		// $this->js_files = array(
-		// 	"index.js",
-		// );
+		$this->js_files = array(
+			"index.js",
+		);
 
 		parent::__construct();
 	}
