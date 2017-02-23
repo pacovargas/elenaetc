@@ -8,6 +8,9 @@ class Controller{
 	protected $footer = false;
 	protected $css_files = false;
 	protected $js_files = false;
+	protected $display_header = true;
+	protected $display_head = true;
+	protected $display_footer = true;
 
 	public function __construct(){
 		$this->smarty = new Smarty;
@@ -24,18 +27,27 @@ class Controller{
 	protected function displayContent(){
 		$html = "";
 
-		if ($this->head){
-			$html .= $this->smarty->fetch($this->head);
+		if($this->display_head){
+			if ($this->head)
+				$html .= $this->smarty->fetch($this->head);
+			else
+				$html .= $this->smarty->fetch("head.tpl");
 		}
 
-		if ($this->header){
-			$html .= $this->smarty->fetch($this->header);
+		if($this->display_header){
+			if ($this->header)
+				$html .= $this->smarty->fetch($this->header);
+			else
+				$html .= $this->smarty->fetch("header.tpl");
 		}
 
 		$html .= $this->smarty->fetch($this->tpl);
 
-		if ($this->footer){
-			$html .= $this->smarty->fetch($this->footer);
+		if($this->display_footer){
+			if ($this->footer)
+				$html .= $this->smarty->fetch($this->footer);
+			else
+				$html .= $this->smarty->fetch("footer.tpl");
 		}
 		echo $html;
 	}
