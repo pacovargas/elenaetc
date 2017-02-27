@@ -28,4 +28,19 @@ class DataBase{
 		}
 	}
 
+	function query($sql){
+		$ret = array();
+		if($result = $this->db->query($sql)){
+			$result->data_seek(0);
+			while ($row = $result->fetch_assoc()){
+				$ret[] = $row;
+			}
+		}
+
+		if(count($ret) > 0)
+			return $ret;
+		else
+			return false;
+	}
+
 }

@@ -716,6 +716,7 @@ body.para-quien-lo-hacemos footer{
   padding: 10px 50px !important;
   font-family: helvetica-bold;
   font-size: 14px;
+  border:none;
 }
 
 .boton:hover{
