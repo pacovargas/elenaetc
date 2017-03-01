@@ -22,8 +22,12 @@ class AdminController extends Controller{
 	}
 
 	public function initContent(){
-		if(Tools::getValue('accion') == "crear")
+		if(Tools::getValue('accion') == "crear"){
+			$this->smarty->assign("regimenes", Regimen::getRegimenes());
+			$this->smarty->assign("provincias", Provincia::getProvincias());
+			$this->smarty->assign("municipios", Municipio::getMunicipiosByProvincias());
 			$admintpl = "crear-propiedad.tpl";
+		}
 		else
 			$admintpl = "admin.tpl";
 
@@ -76,5 +80,5 @@ class AdminController extends Controller{
 				$this->tpl = "login.tpl";
 			}
 		}
-	}	
+	}
 }

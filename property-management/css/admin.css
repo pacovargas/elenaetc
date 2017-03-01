@@ -15,7 +15,8 @@
 }
 
 .cuerpo-admin{
-  min-height: 87vh
+  min-height: 87vh;
+  padding-top: 40px;
 }
 
 table{
@@ -50,4 +51,29 @@ table{
 #filtros{
   background: #CBCBCB;
   height: 100%
+}
+
+.campos input,
+.etiquetas label,
+.campos select{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.etiquetas label{
+ border: 6px solid transparent;
+}
+
+.panel{
+  border: 1px #CBC3C6 solid;
+}
+
+.panel-heading{
+  border-bottom: 1px #CBC3C6 solid;
+  margin-bottom: 20px;
+  background: rgba(203, 195, 198, 0.5);
+}
+
+.capa-botones{
+  padding: 0;
 }
