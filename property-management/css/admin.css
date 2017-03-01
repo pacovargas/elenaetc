@@ -1,0 +1,48 @@
+#cabecera-admin{
+  background: #CB4E2D;
+  padding: 10px;
+  color: white;
+}
+
+#footer-admin{
+  background: #CDB49F;
+  color: white;
+  padding: 10px;
+}
+
+#footer-admin p{
+  margin: 0;
+}
+
+.cuerpo-admin{
+  min-height: 87vh
+}
+
+table{
+  width: 100%;
+}
+
+.cuerpo-admin h2{
+  margin-bottom: 30px;
+}
+
+.titulo-filtros .flex-child{
+  width: 50%;
+}
+
+.titulo-filtros i,
+#capa-cerrar-filtros i{
+  font-size: 20px;
+}
+
+#capa-cerrar-filtros{
+  display: none;
+}
+
+#acciones i{
+  font-size: 32px;
+}
+
+#acciones{
+  margin-bottom: 20px;
+}

@@ -4,25 +4,32 @@ class AdminController extends Controller{
 	private $db;
 	
 	public function __construct(){
-		$this->display_header = false;
-		$this->display_footer = false;
+		$this->header = "header-admin.tpl";
+		$this->footer = "footer-admin.tpl";
 		
 		$this->db = new DataBase();
 
 		$this->css_files = array(
 			"login.css",
+			"admin.css"
 		);
 
-		// $this->js_files = array(
-		// 	"index.js",
-		// );
+		$this->js_files = array(
+			"admin.js",
+		);
 
 		parent::__construct();
 	}
 
 	public function initContent(){
+		if(Tools::getValue('accion') == "crear")
+			$admintpl = "crear-propiedad.tpl";
+		else
+			$admintpl = "admin.tpl";
+
+
 		if(User::isLogged())
-			$this->tpl = "admin.tpl";
+			$this->tpl = $admintpl;
 		else{
 			$errors = "";
 			$user = Tools::getValue('usuario');
@@ -47,7 +54,7 @@ class AdminController extends Controller{
         			setcookie('etc_user', $user, time()+60*60*24*365);
         			setcookie('etc_passwd', sha1($passwd), time()+60*60*24*365);
 					if(User::isLogged())
-						$this->tpl = "admin.tpl";
+						$this->tpl = $admintpl;
 					else{
 						$errors = "<li>Nombre de usuario o contraseña incorrectos</li>";
 						$errors = "<ol>" . $errors . "</ol>";
