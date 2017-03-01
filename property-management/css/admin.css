@@ -46,3 +46,8 @@ table{
 #acciones{
   margin-bottom: 20px;
 }
+
+#filtros{
+  background: #CBCBCB;
+  height: 100%
+}

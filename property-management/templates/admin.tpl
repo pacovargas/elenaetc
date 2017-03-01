@@ -1,19 +1,5 @@
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
-		<div class="col-xs-12 text-center">
-			<h2 class="mays">Propiedades</h2>
-		</div>
-	</div>
-
-	<div class="row" id="acciones">
-		<div class="col-xs-12 text-right">
-			<a href="{$base_url}admin/accion=crear" id="nueva-propiedad">
-				<i class="fa fa-plus-circle" aria-hidden="true"></i>
-			</a>
-		</div>
-	</div>
-
-	<div class="row">
 		<div class="col-md-2" id="filtros">
 			<div class="flex-parent titulo-filtros">
 				<div class="flex-child">
@@ -30,6 +16,11 @@
 			<div id="capa-cerrar-filtros">
 				<a href="#" id="mostrar-filtros">
 					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="text-right" id="acciones">
+				<a href="{$base_url}admin/accion=crear" id="nueva-propiedad">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i>
 				</a>
 			</div>
 			<div>

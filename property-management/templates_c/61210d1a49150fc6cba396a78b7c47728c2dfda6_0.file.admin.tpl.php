@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-01 13:49:12
+/* Smarty version 3.1.30, created on 2017-03-01 15:43:33
   from "/home/paco/repos/elenaetc/property-management/templates/admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b6c348c85224_30355044',
+  'unifunc' => 'content_58b6de153238d5_30429478',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61210d1a49150fc6cba396a78b7c47728c2dfda6' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/admin.tpl',
-      1 => 1488372545,
+      1 => 1488379411,
       2 => 'file',
     ),
   ),
@@ -20,24 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b6c348c85224_30355044 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b6de153238d5_30429478 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container-fluid cuerpo-admin">
-	<div class="row">
-		<div class="col-xs-12 text-center">
-			<h2 class="mays">Propiedades</h2>
-		</div>
-	</div>
-
-	<div class="row" id="acciones">
-		<div class="col-xs-12 text-right">
-			<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
-admin/accion=crear" id="nueva-propiedad">
-				<i class="fa fa-plus-circle" aria-hidden="true"></i>
-			</a>
-		</div>
-	</div>
-
 	<div class="row">
 		<div class="col-md-2" id="filtros">
 			<div class="flex-parent titulo-filtros">
@@ -55,6 +40,12 @@ admin/accion=crear" id="nueva-propiedad">
 			<div id="capa-cerrar-filtros">
 				<a href="#" id="mostrar-filtros">
 					<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="text-right" id="acciones">
+				<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/accion=crear" id="nueva-propiedad">
+					<i class="fa fa-plus-circle" aria-hidden="true"></i>
 				</a>
 			</div>
 			<div>
