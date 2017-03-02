@@ -22,9 +22,9 @@ class AdminController extends Controller{
 	}
 
 	public function initContent(){
-		$errores = "hola";
+		$errores = false;
 
-		if(Tools::getValue('accion') == "crear"){
+		if(Tools::getValue('accion') == "crear" || Tools::getValue('accion') == "actualizar"){
 			$this->smarty->assign(array(
 				"regimenes" => Regimen::getRegimenes(),
 				"provincias" => Provincia::getProvincias(),
@@ -35,6 +35,8 @@ class AdminController extends Controller{
 				"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
 				"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
 				"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
+				"id_propiedad" => Tools::getValue('propiedad'),
+				"accion" => Tools::getValue('accion'),
 				"errores" => $errores,
 			));
 			$admintpl = "crear-propiedad.tpl";
