@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-02 17:49:35
+/* Smarty version 3.1.30, created on 2017-03-02 17:54:00
   from "/home/paco/repos/elenaetc/property-management/templates/admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b84d1f652263_66527575',
+  'unifunc' => 'content_58b84e287c6421_39192177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '61210d1a49150fc6cba396a78b7c47728c2dfda6' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/admin.tpl',
-      1 => 1488473368,
+      1 => 1488473633,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b84d1f652263_66527575 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b84e287c6421_39192177 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
@@ -92,11 +92,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['prop']->value) {
 </td>
 									<td class="text-center"><?php if ($_smarty_tpl->tpl_vars['prop']->value->activa == 1) {?>Sí<?php } else { ?>No<?php }?></td>
 									<td class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
-borrar=<?php echo $_smarty_tpl->tpl_vars['prop']->value->id;?>
-"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-									<td class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
 accion=actualizar&propiedad=<?php echo $_smarty_tpl->tpl_vars['prop']->value->id;?>
 "><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
+									<td class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
+borrar=<?php echo $_smarty_tpl->tpl_vars['prop']->value->id;?>
+"><i class="fa fa-times" aria-hidden="true"></i></a></td>
 								</tr>
 							<?php }?>
 						<?php
