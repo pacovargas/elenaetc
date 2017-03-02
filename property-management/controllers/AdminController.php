@@ -26,24 +26,46 @@ class AdminController extends Controller{
 		$exito = false;
 
 		if(Tools::getValue('accion') == "crear" || Tools::getValue('accion') == "actualizar"){
-			$this->smarty->assign(array(
-				"regimenes" => Regimen::getRegimenes(),
-				"provincias" => Provincia::getProvincias(),
-				"municipios" => Municipio::getMunicipiosByProvincias(),
-				"nombre" => isset($_POST['nombre']) ? $_POST["nombre"] : false,
-				"referencia" => isset($_POST['referencia']) ? $_POST["referencia"] : false,
-				"precio" => isset($_POST['precio']) ? $_POST["precio"] : false,
-				"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
-				"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
-				"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
-				"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
-				"accion" => Tools::getValue('accion'),
-			));
+			if(Tools::getValue('accion') == "crear"){
+				$this->smarty->assign(array(
+					"regimenes" => Regimen::getRegimenes(),
+					"provincias" => Provincia::getProvincias(),
+					"municipios" => Municipio::getMunicipiosByProvincias(),
+					"nombre" => isset($_POST['nombre']) ? $_POST["nombre"] : false,
+					"referencia" => isset($_POST['referencia']) ? $_POST["referencia"] : false,
+					"precio" => isset($_POST['precio']) ? $_POST["precio"] : false,
+					"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
+					"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
+					"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
+					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
+					"accion" => Tools::getValue('accion'),
+				));
+			}
+			else{
+				$propiedad = Propiedad::getPropiedadById(Tools::getValue('propiedad'));
+				$this->smarty->assign(array(
+					"regimenes" => Regimen::getRegimenes(),
+					"provincias" => Provincia::getProvincias(),
+					"municipios" => Municipio::getMunicipiosByProvincias(),
+					"nombre" => $propiedad->nombre,
+					"referencia" => $propiedad->referencia,
+					"precio" => $propiedad->precio,
+					"id_provincia" => $propiedad->provincia,
+					"id_municipio" => $propiedad->municipio,
+					"id_regimen" => $propiedad->regimen,
+					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
+					"accion" => Tools::getValue('accion'),
+				));	
+			}
 
 			if(Tools::getValue("accion-formulario") == "crear" || Tools::getValue("accion-formulario") == "actualizar"){
 				$errores = $this->validarFormulario($_POST["nombre"], $_POST["referencia"], $_POST["precio"]);
 				if($errores === false){
-					$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
+					if(Tools::getValue("accion-formulario") == "crear")	
+						$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
+					else
+						$propiedad = Propiedad::getPropiedadById(Tools::getValue('id_propiedad'));
+					
 					if($propiedad->save()){
 						$errores === false;
 						Tools::redirect(Tools::getBaseUrl() . "admin/");
@@ -52,6 +74,7 @@ class AdminController extends Controller{
 						$errores = "<p>Se ha producido un error creando la propiedad</p>";
 						$admintpl = "crear-propiedad.tpl";
 					}
+					
 				}
 				else{
 					$admintpl = "crear-propiedad.tpl";
@@ -61,8 +84,14 @@ class AdminController extends Controller{
 				$admintpl = "crear-propiedad.tpl";
 
 		}
-		else
+		else{
+			$this->smarty->assign(array(
+				"propiedades" => Propiedad::getPropiedades(),
+				"mostrar_activas" => 1,
+			));
+
 			$admintpl = "admin.tpl";
+		}
 
 
 		if(User::isLogged()){

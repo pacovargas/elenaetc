@@ -35,8 +35,32 @@
 							<th>régimen</th>
 							<th>precio</th>
 							<th>fecha</th>
+							<th>activa</th>
+							<th></th>
+							<th></th>
 						</tr>
 					</thead>
+					{if $propiedades}
+						<tbody>
+						{foreach from=$propiedades item=prop}
+							{if $prop->activa == $mostrar_activas || $mostrar_activas > 1}
+								<tr>
+									<td>{$prop->id}</td>
+									<td>{$prop->nombre}</td>
+									<td>{$prop->referencia}</td>
+									<td>{$prop->nombre_provincia}</td>
+									<td>{$prop->nombre_municipio}</td>
+									<td>{$prop->nombre_regimen}</td>
+									<td>{$prop->precio}€</td>
+									<td>{$prop->fecha}</td>
+									<td>{if $prop->activa == 1}Sí{else}No{/if}</td>
+									<td>X</td>
+									<td><a href="{$current_url}accion=actualizar&propiedad={$prop->id}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
+								</tr>
+							{/if}
+						{/foreach}
+						</tbody>
+					{/if}
 				</table>
 			</div>
 		</div>

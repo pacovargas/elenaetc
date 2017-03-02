@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-02 13:45:03
+/* Smarty version 3.1.30, created on 2017-03-02 16:27:37
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b813cf2f14e0_09263893',
+  'unifunc' => 'content_58b839e9600862_61511849',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488458695,
+      1 => 1488468453,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,9 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b813cf2f14e0_09263893 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b839e9600862_61511849 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<div class="container cuerpo-admin">
+<div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
 		<div class="row panel error-panel">
 			<div class="col-xs-12" id="errores">
@@ -115,12 +115,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			</div>
 		</div>
 
-		<div class="row panel">
-			<div class="col-xs-12 panel-heading">
-				<i class="fa fa-camera" aria-hidden="true"></i> Fotos
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
 				<input type="submit" name="accion-formulario" value="<?php echo $_smarty_tpl->tpl_vars['accion']->value;?>
@@ -128,6 +122,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
+
+		<?php if ($_smarty_tpl->tpl_vars['accion']->value === "actualizar") {?>
+			<div class="row panel">
+				<div class="col-xs-12 panel-heading">
+					<i class="fa fa-camera" aria-hidden="true"></i> Fotos
+				</div>
+			</div>
+		<?php }?>
+
 	</form>
 </div>
 

@@ -1,4 +1,4 @@
-<div class="container cuerpo-admin">
+<div class="container cuerpo-admin" id="plantilla-create">
 	{if $errores !== false}
 		<div class="row panel error-panel">
 			<div class="col-xs-12" id="errores">
@@ -55,18 +55,21 @@
 			</div>
 		</div>
 
-		<div class="row panel">
-			<div class="col-xs-12 panel-heading">
-				<i class="fa fa-camera" aria-hidden="true"></i> Fotos
-			</div>
-		</div>
-
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
 				<input type="submit" name="accion-formulario" value="{$accion}" class="boton" />
 				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
+
+		{if $accion === "actualizar"}
+			<div class="row panel">
+				<div class="col-xs-12 panel-heading">
+					<i class="fa fa-camera" aria-hidden="true"></i> Fotos
+				</div>
+			</div>
+		{/if}
+
 	</form>
 </div>
 

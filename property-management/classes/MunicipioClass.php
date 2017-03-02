@@ -16,4 +16,13 @@ class Municipio{
 		else
 			return false;
 	}
+
+	public static function getNombreById($id){
+		$db = new DataBase();
+		$sql = "select nombre from municipios where id = $id";
+		if($resultado = $db->query($sql))
+			return $resultado[0]["nombre"];
+		else
+			return false;
+	}
 }
