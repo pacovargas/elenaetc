@@ -63,7 +63,8 @@
 
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
-				<input type="submit" name="accion-formulario" value="{$accion}" class="boton" />	
+				<input type="submit" name="accion-formulario" value="{$accion}" class="boton" />
+				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
 	</form>
@@ -78,6 +79,11 @@
 
 		$("#provincia").change(function(event) {
 			refrescaMunicipios(municipios, id_municipio);
+		});
+
+		$("#cancelar").click(function(event) {
+			event.preventDefault();
+			window.location = "{$base_url}admin/";
 		});
 	});
 </script>

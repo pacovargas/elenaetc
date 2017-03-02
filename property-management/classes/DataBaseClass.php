@@ -43,4 +43,12 @@ class DataBase{
 			return false;
 	}
 
+	function update($sql){
+		return $this->db->query($sql);
+	}
+
+	function getLastId(){
+		return $this->db->insert_id;
+	}
+
 }

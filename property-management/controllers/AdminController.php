@@ -43,7 +43,15 @@ class AdminController extends Controller{
 			if(Tools::getValue("accion-formulario") == "crear" || Tools::getValue("accion-formulario") == "actualizar"){
 				$errores = $this->validarFormulario($_POST["nombre"], $_POST["referencia"], $_POST["precio"]);
 				if($errores === false){
-					$admintpl = "crear-propiedad.tpl";
+					$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
+					if($propiedad->save()){
+						$errores === false;
+						Tools::redirect(Tools::getBaseUrl() . "admin/");
+					}
+					else{
+						$errores = "<p>Se ha producido un error creando la propiedad</p>";
+						$admintpl = "crear-propiedad.tpl";
+					}
 				}
 				else{
 					$admintpl = "crear-propiedad.tpl";

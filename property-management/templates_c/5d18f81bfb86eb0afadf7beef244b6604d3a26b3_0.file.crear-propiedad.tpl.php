@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-02 10:37:22
+/* Smarty version 3.1.30, created on 2017-03-02 13:45:03
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b7e7d2f3f9d7_34973904',
+  'unifunc' => 'content_58b813cf2f14e0_09263893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488447433,
+      1 => 1488458695,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b7e7d2f3f9d7_34973904 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b813cf2f14e0_09263893 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container cuerpo-admin">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
@@ -124,7 +124,8 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
 				<input type="submit" name="accion-formulario" value="<?php echo $_smarty_tpl->tpl_vars['accion']->value;?>
-" class="boton" />	
+" class="boton" />
+				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
 	</form>
@@ -142,6 +143,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
 		$("#provincia").change(function(event) {
 			refrescaMunicipios(municipios, id_municipio);
+		});
+
+		$("#cancelar").click(function(event) {
+			event.preventDefault();
+			window.location = "<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/";
 		});
 	});
 <?php echo '</script'; ?>

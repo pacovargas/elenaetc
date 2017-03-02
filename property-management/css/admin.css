@@ -82,3 +82,7 @@ table{
   background: rgba(255, 0, 0, 0.5);
   color: white;
 }
+
+.boton{
+  text-transform: capitalize;
+}
