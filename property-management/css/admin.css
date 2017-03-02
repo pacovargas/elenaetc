@@ -93,3 +93,25 @@ table{
 .panel{
   margin-top: 30px;
 }
+
+table tbody tr:nth-child(even){
+  background: #CBC3C6;
+}
+
+table thead th{
+  text-align: center;
+}
+
+table thead{
+  background:#CB4E2D;
+  color: white;
+}
+
+table td, table th{
+  border: 3px white solid;
+  padding: 2px 5px;
+}
+
+table tbody tr:hover{
+  background: #CDB49F;
+}
