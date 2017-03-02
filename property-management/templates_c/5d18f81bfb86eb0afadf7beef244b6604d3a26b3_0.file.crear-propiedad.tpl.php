@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-02 10:23:13
+/* Smarty version 3.1.30, created on 2017-03-02 10:37:22
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b7e481414499_01090070',
+  'unifunc' => 'content_58b7e7d2f3f9d7_34973904',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488446587,
+      1 => 1488447433,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b7e481414499_01090070 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b7e7d2f3f9d7_34973904 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container cuerpo-admin">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
@@ -47,7 +47,7 @@ function content_58b7e481414499_01090070 (Smarty_Internal_Template $_smarty_tpl)
 				<label for="precio">Precio</label>
 			</div>
 			<div class="col-md-6 campos">
-				<input type="hidden" name="propiedad" id="propiedad" value="<?php echo $_smarty_tpl->tpl_vars['id_propiedad']->value;?>
+				<input type="hidden" name="id_propiedad" id="id_propiedad" value="<?php echo $_smarty_tpl->tpl_vars['id_propiedad']->value;?>
 " />
 				<input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $_smarty_tpl->tpl_vars['nombre']->value;?>
 " />
@@ -123,7 +123,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
-				<input type="submit" name="accion" value="<?php echo $_smarty_tpl->tpl_vars['accion']->value;?>
+				<input type="submit" name="accion-formulario" value="<?php echo $_smarty_tpl->tpl_vars['accion']->value;?>
 " class="boton" />	
 			</div>
 		</div>

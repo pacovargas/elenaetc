@@ -21,7 +21,7 @@
 				<label for="precio">Precio</label>
 			</div>
 			<div class="col-md-6 campos">
-				<input type="hidden" name="propiedad" id="propiedad" value="{$id_propiedad}" />
+				<input type="hidden" name="id_propiedad" id="id_propiedad" value="{$id_propiedad}" />
 				<input type="text" name="nombre" id="nombre" placeholder="Nombre" value="{$nombre}" />
 				<input type="text" name="referencia" id="referencia" placeholder="Referencia" value="{$referencia}" />
 				<select name="provincia" id="provincia">
@@ -63,7 +63,7 @@
 
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
-				<input type="submit" name="accion" value="{$accion}" class="boton" />	
+				<input type="submit" name="accion-formulario" value="{$accion}" class="boton" />	
 			</div>
 		</div>
 	</form>

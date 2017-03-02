@@ -11,4 +11,8 @@ class validate{
     {
         return (strlen($passwd) >= $size && strlen($passwd) < 255);
     }
+
+    public static function isInteger($num){
+        return ctype_digit($num);
+    }
 }

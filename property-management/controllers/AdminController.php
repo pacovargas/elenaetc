@@ -23,6 +23,7 @@ class AdminController extends Controller{
 
 	public function initContent(){
 		$errores = false;
+		$exito = false;
 
 		if(Tools::getValue('accion') == "crear" || Tools::getValue('accion') == "actualizar"){
 			$this->smarty->assign(array(
@@ -35,18 +36,31 @@ class AdminController extends Controller{
 				"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
 				"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
 				"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
-				"id_propiedad" => Tools::getValue('propiedad'),
+				"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
 				"accion" => Tools::getValue('accion'),
-				"errores" => $errores,
 			));
-			$admintpl = "crear-propiedad.tpl";
+
+			if(Tools::getValue("accion-formulario") == "crear" || Tools::getValue("accion-formulario") == "actualizar"){
+				$errores = $this->validarFormulario($_POST["nombre"], $_POST["referencia"], $_POST["precio"]);
+				if($errores === false){
+					$admintpl = "crear-propiedad.tpl";
+				}
+				else{
+					$admintpl = "crear-propiedad.tpl";
+				}
+			}
+			else
+				$admintpl = "crear-propiedad.tpl";
+
 		}
 		else
 			$admintpl = "admin.tpl";
 
 
-		if(User::isLogged())
+		if(User::isLogged()){
+			$this->smarty->assign("errores", $errores);
 			$this->tpl = $admintpl;
+		}
 		else{
 			$errors = "";
 			$user = Tools::getValue('usuario');
@@ -93,5 +107,26 @@ class AdminController extends Controller{
 				$this->tpl = "login.tpl";
 			}
 		}
+	}
+
+	private function validarFormulario($nombre, $referencia, $precio){
+		$ret = "";
+		if($nombre == "")
+			$ret .= "<li>Debe introducir un nombre</li>";
+		if($referencia == "")
+			$ret .= "<li>Debe introducir una referencia</li>";
+		if($precio == "")
+			$ret .= "<li>Debe introducir un precio</li>";
+		else
+			if(!Validate::isInteger($precio))
+				$ret .= "<li>El precio debe ser un número entero</li>";
+
+		if($ret != "")
+			$ret = "<p>Hay algunos errores:</p><ol>$ret</ol>";
+
+		if($ret == "")
+			return false;
+		else
+			return $ret;
 	}
 }
