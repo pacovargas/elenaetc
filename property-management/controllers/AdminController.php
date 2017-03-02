@@ -65,7 +65,7 @@ class AdminController extends Controller{
 						$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
 					else
 						$propiedad = Propiedad::getPropiedadById(Tools::getValue('id_propiedad'));
-					
+
 					if($propiedad->save()){
 						$errores === false;
 						Tools::redirect(Tools::getBaseUrl() . "admin/");
@@ -85,12 +85,19 @@ class AdminController extends Controller{
 
 		}
 		else{
-			$this->smarty->assign(array(
-				"propiedades" => Propiedad::getPropiedades(),
-				"mostrar_activas" => 1,
-			));
+			if(Tools::getValue('borrar')){
+				Propiedad::changeActiva(Tools::getValue('borrar'), 0);
+				Tools::redirect(Tools::getBaseUrl() . "admin/");
+				$admintpl = "admin.tpl";				
+			}
+			else{
+				$this->smarty->assign(array(
+					"propiedades" => Propiedad::getPropiedades(),
+					"mostrar_activas" => 1,
+				));
 
-			$admintpl = "admin.tpl";
+				$admintpl = "admin.tpl";
+			}
 		}
 
 

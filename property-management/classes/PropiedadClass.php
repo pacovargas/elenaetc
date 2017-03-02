@@ -95,4 +95,10 @@ class Propiedad{
 			return false;
 		}
 	}
+
+	public static function changeActiva($id, $activa){
+		$db = new DataBase();
+		$sql = "update propiedades set activa = $activa where id = $id";
+		return $db->update($sql);
+	}
 }

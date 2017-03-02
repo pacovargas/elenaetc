@@ -54,7 +54,7 @@
 									<td>{$prop->precio}€</td>
 									<td>{$prop->fecha}</td>
 									<td>{if $prop->activa == 1}Sí{else}No{/if}</td>
-									<td>X</td>
+									<td><a href="{$current_url}borrar={$prop->id}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
 									<td><a href="{$current_url}accion=actualizar&propiedad={$prop->id}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
 								</tr>
 							{/if}
