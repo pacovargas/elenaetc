@@ -77,3 +77,8 @@ table{
 .capa-botones{
   padding: 0;
 }
+
+.error-panel{
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+}

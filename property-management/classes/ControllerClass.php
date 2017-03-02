@@ -16,6 +16,7 @@ class Controller{
 		$this->smarty = new Smarty;
 
 		$this->smarty->assign('base_url', Tools::getBaseUrl());
+		$this->smarty->assign('current_url', Tools::getCurrentUrl());
 
 		$this->addCSS($this->css_files);
 		$this->addJS($this->js_files);

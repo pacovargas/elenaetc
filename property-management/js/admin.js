@@ -1,12 +1,20 @@
-function refrescaMunicipios(municipios){
+function refrescaMunicipios(municipios, id_municipio){
 	var seleccionado = $("#provincia option:selected").val();
 	var mun = municipios[seleccionado];
 	var options = "";
 	$(mun).each(function(index, el) {
-		if(el.nombre === "Cádiz")
-			options = options + "<option value='" + el.id + "' selected='selected'>" + el.nombre + "</option>";
-		else
-			options = options + "<option value='" + el.id + "'>" + el.nombre + "</option>";
+		if(!id_municipio){
+			if(el.nombre === "Cádiz")
+				options = options + "<option value='" + el.id + "' selected='selected'>" + el.nombre + "</option>";
+			else
+				options = options + "<option value='" + el.id + "'>" + el.nombre + "</option>";
+		}
+		else{
+			if(parseInt(el.id) === parseInt(id_municipio))
+				options = options + "<option value='" + el.id + "' selected='selected'>" + el.nombre + "</option>";
+			else
+				options = options + "<option value='" + el.id + "'>" + el.nombre + "</option>";	
+		}
 
 	});
 	$("#municipio").html(options);

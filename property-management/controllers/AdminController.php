@@ -22,10 +22,21 @@ class AdminController extends Controller{
 	}
 
 	public function initContent(){
+		$errores = "hola";
+
 		if(Tools::getValue('accion') == "crear"){
-			$this->smarty->assign("regimenes", Regimen::getRegimenes());
-			$this->smarty->assign("provincias", Provincia::getProvincias());
-			$this->smarty->assign("municipios", Municipio::getMunicipiosByProvincias());
+			$this->smarty->assign(array(
+				"regimenes" => Regimen::getRegimenes(),
+				"provincias" => Provincia::getProvincias(),
+				"municipios" => Municipio::getMunicipiosByProvincias(),
+				"nombre" => isset($_POST['nombre']) ? $_POST["nombre"] : false,
+				"referencia" => isset($_POST['referencia']) ? $_POST["referencia"] : false,
+				"precio" => isset($_POST['precio']) ? $_POST["precio"] : false,
+				"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
+				"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
+				"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
+				"errores" => $errores,
+			));
 			$admintpl = "crear-propiedad.tpl";
 		}
 		else
