@@ -123,12 +123,24 @@ class Propiedad{
 	public static function addFoto($id, $nombreOriginal, $nombreSubido){
 		$extension = Tools::getFileExtension($nombreOriginal);
 		$nombre_archivo = Propiedad::getNombreFoto($id, $extension);
-		// $ruta = Tools::getBaseUrl() . "img/propiedades/$nombre_archivo";
 		$ruta = "img/propiedades/$nombre_archivo";
 		if (move_uploaded_file($nombreSubido, $ruta)){
 			$db = new DataBase();
 			$sql = "insert into fotos (nombre, propiedad) values ('$nombre_archivo', $id)";
 			$db->update($sql);
 		}
+	}
+
+	public static function removeFoto($id){
+		$db = new DataBase();
+		$sql = "select nombre from fotos where id = $id";
+		if($resultado = $db->query($sql)){
+			$archivo = $resultado[0]["nombre"];
+			if(unlink("img/propiedades/$archivo")){
+				$sql = "delete from fotos where id = $id";
+				$db->update($sql);
+			}
+		}
+
 	}
 }

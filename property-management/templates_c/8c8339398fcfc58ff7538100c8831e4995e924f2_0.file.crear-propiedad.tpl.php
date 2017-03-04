@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 21:17:28
+/* Smarty version 3.1.30, created on 2017-03-04 21:45:28
   from "/Users/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bb20d8797ab8_39874546',
+  'unifunc' => 'content_58bb2768abd350_77985106',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c8339398fcfc58ff7538100c8831e4995e924f2' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488658532,
+      1 => 1488659847,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bb20d8797ab8_39874546 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bb2768abd350_77985106 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
@@ -138,7 +138,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['foto']->value) {
 ?>
 						<div class="col-md-4 foto">
 							<div class="eliminar-foto">
-								<a href="#"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/accion=eliminar&foto=<?php echo $_smarty_tpl->tpl_vars['foto']->value['id'];?>
+&propiedad=<?php echo $_smarty_tpl->tpl_vars['foto']->value['propiedad'];?>
+"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
 							</div>
 							<img src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 img/propiedades/<?php echo $_smarty_tpl->tpl_vars['foto']->value['nombre'];?>

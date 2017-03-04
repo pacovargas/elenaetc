@@ -101,12 +101,19 @@ class AdminController extends Controller{
 				$admintpl = "admin.tpl";				
 			}
 			else{
-				$this->smarty->assign(array(
-					"propiedades" => Propiedad::getPropiedades(),
-					"mostrar_activas" => 1,
-				));
+				if(Tools::getValue("accion") == "eliminar"){
+					$propiedad = Tools::getValue("propiedad");
+					Propiedad::removeFoto(Tools::getValue("foto"));
+					Tools::redirect(Tools::getBaseUrl() . "admin/accion=actualizar&propiedad=$propiedad");
+				}
+				else{
+					$this->smarty->assign(array(
+						"propiedades" => Propiedad::getPropiedades(),
+						"mostrar_activas" => 1,
+					));
 
-				$admintpl = "admin.tpl";
+					$admintpl = "admin.tpl";
+				}
 			}
 		}
 
