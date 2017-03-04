@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 23:45:43
+/* Smarty version 3.1.30, created on 2017-03-05 00:42:35
   from "/Users/paco/repos/elenaetc/property-management/templates/admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bb439775f124_15078408',
+  'unifunc' => 'content_58bb50ebae6004_20523936',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43b107673777654751a931a3f318161d573f1a79' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/admin.tpl',
-      1 => 1488667535,
+      1 => 1488670941,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bb439775f124_15078408 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bb50ebae6004_20523936 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
@@ -52,15 +52,139 @@ admin/accion=crear" id="nueva-propiedad">
 				<table>
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>nombre</th>
-							<th>referencia</th>
-							<th>provincia</th>
-							<th>localidad</th>
-							<th>régimen</th>
-							<th>precio</th>
-							<th>fecha</th>
-							<th>activa</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=id<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'id') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									id
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'id') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=nombre<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'nombre') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									nombre
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'nombre') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=referencia<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'referencia') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									referencia
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'referencia') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=provincia<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'provincia') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									provincia
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'provincia') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=municipio<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'municipio') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									municipio
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'municipio') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=regimen<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'regimen') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									régimen
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'regimen') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=precio<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'precio') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									precio
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'precio') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=fecha<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'fecha') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									fecha
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'fecha') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=activa<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'activa') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									activa
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'activa') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a></th>
 							<th></th>
 							<th></th>
 						</tr>

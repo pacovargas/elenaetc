@@ -85,7 +85,6 @@ class AdminController extends Controller{
 				if(Tools::getValue("subir") == "subir"){
 					$this->smarty->assign("files", $_FILES);
 					Propiedad::addFoto(Tools::getValue("propiedad"), $_FILES['foto']['name'], $_FILES['foto']['tmp_name']);
-					// $admintpl = "crear-propiedad.tpl";
 					Tools::redirect(Tools::getCurrentUrl());
 				}
 				else{
@@ -98,7 +97,6 @@ class AdminController extends Controller{
 			if(Tools::getValue('borrar')){
 				Propiedad::changeActiva(Tools::getValue('borrar'), 0);
 				Tools::redirect(Tools::getBaseUrl() . "admin/");
-				$admintpl = "admin.tpl";				
 			}
 			else{
 				if(Tools::getValue("accion") == "eliminar"){
@@ -107,9 +105,18 @@ class AdminController extends Controller{
 					Tools::redirect(Tools::getBaseUrl() . "admin/accion=actualizar&propiedad=$propiedad");
 				}
 				else{
+					if(Tools::getValue("orderby")){
+						$ascdesc = Tools::getValue("ascdesc") ? Tools::getValue("ascdesc") : "asc";
+						$propiedades = Propiedad::getPropiedades(Tools::getValue("orderby"), $ascdesc);
+					}
+					else{
+						$propiedades = Propiedad::getPropiedades();
+					}
 					$this->smarty->assign(array(
-						"propiedades" => Propiedad::getPropiedades(),
+						"propiedades" => $propiedades,
 						"mostrar_activas" => 1,
+						"orderby" => Tools::getValue("orderby"),
+						"ascdesc" => Tools::getValue("ascdesc") ? Tools::getValue("ascdesc") : "asc",
 					));
 
 					$admintpl = "admin.tpl";

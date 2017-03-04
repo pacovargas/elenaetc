@@ -27,15 +27,112 @@
 				<table>
 					<thead>
 						<tr>
-							<th>id</th>
-							<th>nombre</th>
-							<th>referencia</th>
-							<th>provincia</th>
-							<th>localidad</th>
-							<th>régimen</th>
-							<th>precio</th>
-							<th>fecha</th>
-							<th>activa</th>
+							<th>
+								<a href="{$base_url}admin/orderby=id{if $orderby=='id'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									id
+									{if $orderby=='id'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=nombre{if $orderby=='nombre'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									nombre
+									{if $orderby=='nombre'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=referencia{if $orderby=='referencia'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									referencia
+									{if $orderby=='referencia'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=provincia{if $orderby=='provincia'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									provincia
+									{if $orderby=='provincia'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=municipio{if $orderby=='municipio'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									municipio
+									{if $orderby=='municipio'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=regimen{if $orderby=='regimen'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									régimen
+									{if $orderby=='regimen'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=precio{if $orderby=='precio'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									precio
+									{if $orderby=='precio'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
+								<a href="{$base_url}admin/orderby=fecha{if $orderby=='fecha'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									fecha
+									{if $orderby=='fecha'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th><a href="{$base_url}admin/orderby=activa{if $orderby=='activa'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									activa
+									{if $orderby=='activa'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a></th>
 							<th></th>
 							<th></th>
 						</tr>

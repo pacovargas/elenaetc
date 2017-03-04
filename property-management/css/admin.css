@@ -119,6 +119,15 @@ table tbody tr:hover{
   background: #CDB49F;
 }
 
+table th a{
+  color: white;
+}
+
+table th a:hover{
+  color: white;
+  opacity: 0.7;
+}
+
 .foto{
   margin-bottom: 20px;
 }
