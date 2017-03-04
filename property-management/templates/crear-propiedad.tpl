@@ -61,16 +61,33 @@
 				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
+	</form>
+
 
 		{if $accion === "actualizar"}
 			<div class="row panel">
 				<div class="col-xs-12 panel-heading">
 					<i class="fa fa-camera" aria-hidden="true"></i> Fotos
 				</div>
+				{if $fotos}
+					{foreach from=$fotos item=foto}
+						<div class="col-md-4 foto">
+							<div class="eliminar-foto">
+								<a href="#"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
+							</div>
+							<img src="{$base_url}img/propiedades/{$foto.nombre}" class="img-responsive" />
+						</div>
+					{/foreach}
+					<div class="col-xs-12" id="formulario-subir">
+						<form enctype="multipart/form-data" action="{$current_url}" method="POST" name="subir-foto" id="subir-foto">
+							<p>Subir nueva foto:</p>
+							<input name="foto" type="file" />
+   							<input type="submit" value="subir" class="boton" name="subir" />
+						</form>
+					</div>
+				{/if}
 			</div>
 		{/if}
-
-	</form>
 </div>
 
 <script type="text/javascript">

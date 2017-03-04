@@ -55,6 +55,7 @@ class AdminController extends Controller{
 					"id_regimen" => $propiedad->regimen,
 					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
 					"accion" => Tools::getValue('accion'),
+					"fotos" => Propiedad::getFotos(Tools::getValue('propiedad')),
 				));	
 			}
 
@@ -80,8 +81,17 @@ class AdminController extends Controller{
 					$admintpl = "crear-propiedad.tpl";
 				}
 			}
-			else
-				$admintpl = "crear-propiedad.tpl";
+			else{
+				if(Tools::getValue("subir") == "subir"){
+					$this->smarty->assign("files", $_FILES);
+					Propiedad::addFoto(Tools::getValue("propiedad"), $_FILES['foto']['name'], $_FILES['foto']['tmp_name']);
+					// $admintpl = "crear-propiedad.tpl";
+					Tools::redirect(Tools::getCurrentUrl());
+				}
+				else{
+					$admintpl = "crear-propiedad.tpl";
+				}
+			}
 
 		}
 		else{

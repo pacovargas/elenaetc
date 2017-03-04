@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 14:20:39
+/* Smarty version 3.1.30, created on 2017-03-04 21:17:28
   from "/Users/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58babf279b80d9_56291611',
+  'unifunc' => 'content_58bb20d8797ab8_39874546',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c8339398fcfc58ff7538100c8831e4995e924f2' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488633523,
+      1 => 1488658532,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58babf279b80d9_56291611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bb20d8797ab8_39874546 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
@@ -122,16 +122,45 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
 			</div>
 		</div>
+	</form>
+
 
 		<?php if ($_smarty_tpl->tpl_vars['accion']->value === "actualizar") {?>
 			<div class="row panel">
 				<div class="col-xs-12 panel-heading">
 					<i class="fa fa-camera" aria-hidden="true"></i> Fotos
 				</div>
+				<?php if ($_smarty_tpl->tpl_vars['fotos']->value) {?>
+					<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['fotos']->value, 'foto');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['foto']->value) {
+?>
+						<div class="col-md-4 foto">
+							<div class="eliminar-foto">
+								<a href="#"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
+							</div>
+							<img src="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+img/propiedades/<?php echo $_smarty_tpl->tpl_vars['foto']->value['nombre'];?>
+" class="img-responsive" />
+						</div>
+					<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+					<div class="col-xs-12" id="formulario-subir">
+						<form enctype="multipart/form-data" action="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
+" method="POST" name="subir-foto" id="subir-foto">
+							<p>Subir nueva foto:</p>
+							<input name="foto" type="file" />
+   							<input type="submit" value="subir" class="boton" name="subir" />
+						</form>
+					</div>
+				<?php }?>
 			</div>
 		<?php }?>
-
-	</form>
 </div>
 
 <?php echo '<script'; ?>

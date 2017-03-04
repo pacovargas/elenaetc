@@ -83,4 +83,37 @@ class Tools{
         header("Location: $url");
         die();
     }
+
+    public static function getFileExtension($filename){
+        $exploded = explode(".", $filename);
+        return strtolower($exploded[count($exploded)-1]);
+    }
+
+    public static function fd($object, $type = 'log')
+    {
+        $types = array('log', 'debug', 'info', 'warn', 'error', 'assert');
+
+        if (!in_array($type, $types)) {
+            $type = 'log';
+        }
+
+        echo '
+            <script type="text/javascript">
+                console.'.$type.'('.json_encode($object).');
+            </script>
+        ';
+    }
+
+    public static function dieObject($object, $kill = true)
+    {
+        echo '<xmp style="text-align: left;">';
+        print_r($object);
+        echo '</xmp><br />';
+
+        if ($kill) {
+            die('END');
+        }
+
+        return $object;
+    }
 }
