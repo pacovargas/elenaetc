@@ -55,7 +55,7 @@
 									<td class="text-right">{$prop->fecha}</td>
 									<td class="text-center">{if $prop->activa == 1}Sí{else}No{/if}</td>
 									<td class="text-center"><a href="{$current_url}accion=actualizar&propiedad={$prop->id}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
-									<td class="text-center"><a href="{$current_url}borrar={$prop->id}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+									<td class="text-center"><a href="{$current_url}borrar={$prop->id}" class="confirmar" data-confirm-msg="Se va a eliminar la propiedad {$prop->nombre}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
 								</tr>
 							{/if}
 						{/foreach}

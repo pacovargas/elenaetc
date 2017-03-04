@@ -36,4 +36,11 @@ $(function(){
 		$("#tabla-propiedades").removeClass('col-md-12');
 		$("#tabla-propiedades").addClass('col-md-10');
 	});
+
+	$("a.confirmar").click(function(event) {
+		var msg = $(this).data('confirm-msg');
+		if(!confirm(msg)){
+			event.preventDefault();
+		}
+	});
 });

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-04 14:19:08
+/* Smarty version 3.1.30, created on 2017-03-04 23:45:43
   from "/Users/paco/repos/elenaetc/property-management/templates/admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58babeccc6a4b6_41929084',
+  'unifunc' => 'content_58bb439775f124_15078408',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43b107673777654751a931a3f318161d573f1a79' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/admin.tpl',
-      1 => 1488633523,
+      1 => 1488667535,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58babeccc6a4b6_41929084 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bb439775f124_15078408 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
@@ -96,6 +96,7 @@ accion=actualizar&propiedad=<?php echo $_smarty_tpl->tpl_vars['prop']->value->id
 "><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
 									<td class="text-center"><a href="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
 borrar=<?php echo $_smarty_tpl->tpl_vars['prop']->value->id;?>
+" class="confirmar" data-confirm-msg="Se va a eliminar la propiedad <?php echo $_smarty_tpl->tpl_vars['prop']->value->nombre;?>
 "><i class="fa fa-times" aria-hidden="true"></i></a></td>
 								</tr>
 							<?php }?>

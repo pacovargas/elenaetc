@@ -73,7 +73,7 @@
 					{foreach from=$fotos item=foto}
 						<div class="col-md-4 foto">
 							<div class="eliminar-foto">
-								<a href="{$base_url}admin/accion=eliminar&foto={$foto.id}&propiedad={$foto.propiedad}"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
+								<a href="{$base_url}admin/accion=eliminar&foto={$foto.id}&propiedad={$foto.propiedad}" class="confirmar" data-confirm-msg="Se va a eliminar la foto"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
 							</div>
 							<img src="{$base_url}img/propiedades/{$foto.nombre}" class="img-responsive" />
 						</div>
