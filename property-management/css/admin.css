@@ -144,3 +144,23 @@ table th a:hover{
   border-top: 1px solid #CBC3C6;
   padding-top: 20px;
 }
+
+#formulario_filtros{
+  padding-top: 20px;
+}
+
+.grupo_filtros{
+  margin-bottom: 10px;
+}
+
+#formulario_filtros input[type='text'],
+#formulario_filtros select{
+  width: 100%;
+  height: 28px;
+  border: 1px solid grey;
+}
+
+#preciomayor,
+#preciomenor{
+  width: 46% !important;
+}

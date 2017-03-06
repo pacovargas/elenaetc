@@ -105,18 +105,34 @@ class AdminController extends Controller{
 					Tools::redirect(Tools::getBaseUrl() . "admin/accion=actualizar&propiedad=$propiedad");
 				}
 				else{
+					$having = "";
+					if(Tools::getValue("filtrar") == "filtrar"){
+						$having = $this->getHaving();
+					}
+
 					if(Tools::getValue("orderby")){
 						$ascdesc = Tools::getValue("ascdesc") ? Tools::getValue("ascdesc") : "asc";
-						$propiedades = Propiedad::getPropiedades(Tools::getValue("orderby"), $ascdesc);
+						$propiedades = Propiedad::getPropiedades($having, Tools::getValue("orderby"), $ascdesc);
 					}
 					else{
-						$propiedades = Propiedad::getPropiedades();
+						$propiedades = Propiedad::getPropiedades($having);
 					}
+
 					$this->smarty->assign(array(
 						"propiedades" => $propiedades,
 						"mostrar_activas" => 1,
 						"orderby" => Tools::getValue("orderby"),
 						"ascdesc" => Tools::getValue("ascdesc") ? Tools::getValue("ascdesc") : "asc",
+						"having" => $having,
+						"fnombre" => Tools::getValue("fnombre") ? Tools::getValue("fnombre") : "",
+						"freferencia" => Tools::getValue("freferencia") ? Tools::getValue("freferencia") : "",
+						"factiva" => Tools::getValue("factiva") !== false ? Tools::getValue("factiva") : "1",
+						"regimenes" => Regimen::getRegimenes(),
+						"provincias" => Provincia::getProvincias(),
+						"municipios" => Municipio::getAllMunicipios(),
+						"fprovincia" => isset($_POST['fprovincia']) ? $_POST["fprovincia"] : false,
+						"fmunicipio" => isset($_POST['fmunicipio']) ? $_POST["fmunicipio"] : false,
+						"fregimen" => isset($_POST['fregimen']) ? $_POST["fregimen"] : false,
 					));
 
 					$admintpl = "admin.tpl";
@@ -196,5 +212,66 @@ class AdminController extends Controller{
 			return false;
 		else
 			return $ret;
+	}
+
+	private function getHaving(){
+		$ret = "";
+		if(Tools::getValue("fnombre") && Tools::getValue("fnombre") != "")
+			if($ret == "")
+				$ret .= "nombre like '%" . Tools::getValue("fnombre") . "%'";
+			else
+				$ret .= " and nombre like '%" . Tools::getValue("fnombre") . "%'";
+
+
+		if(Tools::getValue("freferencia") && Tools::getValue("freferencia") != "")
+			if($ret == "")
+				$ret .= "referencia like '%" . Tools::getValue("freferencia") . "%'";
+			else
+				$ret .= " and referencia like '%" . Tools::getValue("freferencia") . "%'";
+
+		$valores_activa = array(
+			"0" => "activa = 0",
+			"1" => "activa = 1",
+			"2" => "activa < 2"
+		);
+		if(Tools::getValue("factiva") !== false && Tools::getValue("factiva") != "")
+			if($ret == "")
+				$ret .= $valores_activa[Tools::getValue("factiva")];
+			else
+				$ret .= " and " . $valores_activa[Tools::getValue("factiva")];
+
+		if(Tools::getValue("fprovincia") !== false && intval(Tools::getValue("fprovincia")) > 0)
+			if($ret == "")
+				$ret .= "provincia = " . Tools::getValue("fprovincia");
+			else
+				$ret .= " and provincia = " . Tools::getValue("fprovincia");
+
+		if(Tools::getValue("fmunicipio") !== false && intval(Tools::getValue("fmunicipio")) > 0)
+			if($ret == "")
+				$ret .= "municipio = " . Tools::getValue("fmunicipio");
+			else
+				$ret .= " and municipio = " . Tools::getValue("fmunicipio");
+
+		if(Tools::getValue("fregimen") !== false && intval(Tools::getValue("fregimen")) > 0)
+			if($ret == "")
+				$ret .= "regimen = " . Tools::getValue("fregimen");
+			else
+				$ret .= " and regimen = " . Tools::getValue("fregimen");
+
+		if(Tools::getValue("preciomayor") !== false && intval(Tools::getValue("preciomayor")) > 0){
+			$preciomayor = Tools::getValue("preciomayor");
+			$preciomenor = Tools::getValue("preciomenor") ? Tools::getValue("preciomenor") : $preciomayor;
+			if($ret == "")
+				$ret .= "precio >= $preciomayor and precio <= $preciomenor";
+			else
+				$ret .= " and precio >= $preciomayor and precio <= $preciomenor";
+		}
+
+		
+
+		if($ret != "")
+			$ret = "having " . $ret;
+
+		return $ret;
 	}
 }

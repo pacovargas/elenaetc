@@ -43,4 +43,10 @@ $(function(){
 			event.preventDefault();
 		}
 	});
+
+	$("div#tabla-propiedades th a").click(function(event) {
+		event.preventDefault();
+		$("form#filtros").attr('action', $(this).attr('href'));
+		$("form#filtros input#filtrar").click();
+	});
 });

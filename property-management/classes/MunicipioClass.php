@@ -25,4 +25,10 @@ class Municipio{
 		else
 			return false;
 	}
+
+	public static function getAllMunicipios(){
+		$db = new DataBase();
+		$sql = "select * from municipios order by nombre asc";
+		return $db->query($sql);
+	}
 }

@@ -68,9 +68,10 @@ class Propiedad{
 		return false;
 	}
 
-	public static function getPropiedades($orderby = "id", $ascdesc = "desc"){
+	public static function getPropiedades($having = "", $orderby = "id", $ascdesc = "desc"){
 		$db = new DataBase();
-		$sql = "select * from propiedades order by $orderby $ascdesc";
+		if($having == "") $having = "having activa = 1";
+		$sql = "select * from propiedades $having order by $orderby $ascdesc";
 
 		if($res = $db->query($sql)){
 			$props = array();

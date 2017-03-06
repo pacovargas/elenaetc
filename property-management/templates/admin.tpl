@@ -1,3 +1,4 @@
+<pre>{$having}</pre>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
 		<div class="col-md-2" id="filtros">
@@ -10,6 +11,60 @@
 						<i class="fa fa-angle-double-left" aria-hidden="true"></i>
 					</a>					
 				</div>
+			</div>
+			<div id="formulario_filtros">
+				<form method="post" action="{$current_url}" name="filtros" id="filtros">
+					<div class="grupo_filtros">
+						Nombre<br />
+						<input type="text" name="fnombre" id="fnombre" value="{$fnombre}" />
+					</div>
+					<div class="grupo_filtros">
+						Referencia<br />
+						<input type="text" name="freferencia" id="freferencia" placeholder="referencia" value="{$freferencia}" />
+					</div>
+					<div class="grupo_filtros">
+						Provincia<br />
+						<select name="fprovincia" id="fprovincia">
+							<option value="0"></option>
+							{foreach from=$provincias item=provincia}
+								<option value="{$provincia.id}" {if $provincia.id === $fprovincia}selected="selected"{/if}>{$provincia.nombre}</option>
+							{/foreach}
+						</select>
+					</div>
+					<div class="grupo_filtros">
+						Municipio<br />
+						<select name="fmunicipio" id="fmunicipio">
+							<option value="0"></option>
+							{foreach from=$municipios item=municipio}
+								<option value="{$municipio.id}" {if $municipio.id === $fmunicipio}selected="selected"{/if}>{$municipio.nombre}</option>
+							{/foreach}
+						</select>
+					</div>
+					<div class="grupo_filtros">
+						Régimen<br />
+						<select name="fregimen" id="fregimen">
+							<option value="0"></option>
+							{foreach from=$regimenes item=regimen}
+								<option value="{$regimen.id}" {if $regimen.id === $fregimen}selected="selected"{/if}>{$regimen.nombre}</option>
+							{/foreach}
+						</select>
+					</div>
+					<div class="grupo_filtros">
+						Precio entre<br />
+						<input type="text" name="preciomayor" id="preciomayor" /> y <input type="text" name="preciomenor" id="preciomenor" />
+					</div>
+					<div class="grupo_filtros">
+						Activa<br />
+						<select name="factiva" id="factiva">
+							<option value="1" {if $factiva == '1'}selected="selected"{/if}>Sí</option>
+							<option value="0" {if $factiva == '0'}selected="selected"{/if}>No</option>
+							<option value="2" {if $factiva == '2'}selected="selected"{/if}>Todas</option>
+						</select>
+					</div>
+					<div class="grupo_filtros">
+						<input type="submit" name="filtrar" id="filtrar" value="filtrar" class="boton" />
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="col-md-10" id="tabla-propiedades">
@@ -140,21 +195,19 @@
 					{if $propiedades}
 						<tbody>
 						{foreach from=$propiedades item=prop}
-							{if $prop->activa == $mostrar_activas || $mostrar_activas > 1}
-								<tr>
-									<td class="text-center">{$prop->id}</td>
-									<td>{$prop->nombre}</td>
-									<td>{$prop->referencia}</td>
-									<td>{$prop->nombre_provincia}</td>
-									<td>{$prop->nombre_municipio}</td>
-									<td>{$prop->nombre_regimen}</td>
-									<td class="text-right">{$prop->precio}€</td>
-									<td class="text-right">{$prop->fecha}</td>
-									<td class="text-center">{if $prop->activa == 1}Sí{else}No{/if}</td>
-									<td class="text-center"><a href="{$current_url}accion=actualizar&propiedad={$prop->id}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
-									<td class="text-center"><a href="{$current_url}borrar={$prop->id}" class="confirmar" data-confirm-msg="Se va a eliminar la propiedad {$prop->nombre}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
-								</tr>
-							{/if}
+							<tr>
+								<td class="text-center">{$prop->id}</td>
+								<td>{$prop->nombre}</td>
+								<td>{$prop->referencia}</td>
+								<td>{$prop->nombre_provincia}</td>
+								<td>{$prop->nombre_municipio}</td>
+								<td>{$prop->nombre_regimen}</td>
+								<td class="text-right">{$prop->precio}€</td>
+								<td class="text-right">{$prop->fecha}</td>
+								<td class="text-center">{if $prop->activa == 1}Sí{else}No{/if}</td>
+								<td class="text-center"><a href="{$current_url}accion=actualizar&propiedad={$prop->id}"><i class="fa fa-pencil-square" aria-hidden="true"></i></a></td>
+								<td class="text-center"><a href="{$current_url}borrar={$prop->id}" class="confirmar" data-confirm-msg="Se va a eliminar la propiedad {$prop->nombre}"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+							</tr>
 						{/foreach}
 						</tbody>
 					{/if}
