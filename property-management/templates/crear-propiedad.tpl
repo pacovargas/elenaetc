@@ -70,20 +70,22 @@
 					<i class="fa fa-camera" aria-hidden="true"></i> Fotos
 				</div>
 				{if $fotos}
+					<div class="col-xs-12 flex-parent contenedor-fotos">
 					{foreach from=$fotos item=foto}
-						<div class="col-md-4 foto">
+						<div class="foto flex-child">
 							<div class="eliminar-foto">
 								<a href="{$base_url}admin/accion=eliminar&foto={$foto.id}&propiedad={$foto.propiedad}" class="confirmar" data-confirm-msg="Se va a eliminar la foto"><i class="fa fa-times" aria-hidden="true"></i> Eliminar</a>
 							</div>
-							<img src="{$base_url}img/propiedades/{$foto.nombre}" class="img-responsive" />
+							<img src="{$base_url}img/propiedades/{$foto.nombre}" />
 						</div>
 					{/foreach}
+					</div>
 				{/if}
 				<div class="col-xs-12" id="formulario-subir">
 					<form enctype="multipart/form-data" action="{$current_url}" method="POST" name="subir-foto" id="subir-foto">
 						<p>Subir nueva foto:</p>
 						<input name="foto" type="file" />
-							<input type="submit" value="subir" class="boton" name="subir" />
+						<input type="submit" value="subir" class="boton" name="subir" />
 					</form>
 				</div>
 			</div>

@@ -128,8 +128,19 @@ table th a:hover{
   opacity: 0.7;
 }
 
+.contenedor-fotos{
+  flex-wrap: wrap;
+}
+
 .foto{
   margin-bottom: 20px;
+  width: 33%;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.foto img{
+  object-fit: cover;
 }
 
 #formulario-subir p{
