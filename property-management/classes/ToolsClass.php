@@ -61,7 +61,7 @@ class Tools{
         $dirs = ltrim($dirs, "/");
         $exploded = explode("/", $dirs);
         if(strpos($exploded[count($exploded)-1], "=") === false){
-            if($_GET['controller'] != "")
+            if(Tools::getValue('controller'))
                 $exploded = array_slice($exploded, 0, count($exploded) - 1);
         }
         else
