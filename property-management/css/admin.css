@@ -164,3 +164,7 @@ table th a:hover{
 #preciomenor{
   width: 46% !important;
 }
+
+.grupo_fechas input{
+  width: 13% !important;
+}

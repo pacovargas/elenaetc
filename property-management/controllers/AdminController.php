@@ -133,6 +133,15 @@ class AdminController extends Controller{
 						"fprovincia" => isset($_POST['fprovincia']) ? $_POST["fprovincia"] : false,
 						"fmunicipio" => isset($_POST['fmunicipio']) ? $_POST["fmunicipio"] : false,
 						"fregimen" => isset($_POST['fregimen']) ? $_POST["fregimen"] : false,
+						"preciomayor" => isset($_POST['preciomayor']) ? $_POST["preciomayor"] : false,
+						"preciomenor" => isset($_POST['preciomenor']) ? $_POST["preciomenor"] : false,
+						"diamenor" => isset($_POST['diamenor']) ? $_POST["diamenor"] : false,
+						"mesmenor" => isset($_POST['mesmenor']) ? $_POST["mesmenor"] : false,
+						"anomenor" => isset($_POST['anomenor']) ? $_POST["anomenor"] : false,
+						"diamayor" => isset($_POST['diamayor']) ? $_POST["diamayor"] : false,
+						"mesmayor" => isset($_POST['mesmayor']) ? $_POST["mesmayor"] : false,
+						"anomayor" => isset($_POST['anomayor']) ? $_POST["anomayor"] : false,
+
 					));
 
 					$admintpl = "admin.tpl";
@@ -265,6 +274,25 @@ class AdminController extends Controller{
 				$ret .= "precio >= $preciomayor and precio <= $preciomenor";
 			else
 				$ret .= " and precio >= $preciomayor and precio <= $preciomenor";
+		}
+
+		$diamenor = Tools::getValue("diamenor");
+		$mesmenor = Tools::getValue("mesmenor");
+		$anomenor = Tools::getValue("anomenor");
+		$diamayor = Tools::getValue("diamayor");
+		$mesmayor = Tools::getValue("mesmayor");
+		$anomayor = Tools::getValue("anomayor");
+		if(($diamenor && $diamenor != "") && ($mesmenor && $mesmenor != "") && ($anomenor && $anomenor != "")){
+			$fechamenor = "$anomenor-$mesmenor-$diamenor 00:00:00";
+			if(($diamayor && $diamayor != "") && ($mesmayor && $mesmayor != "") && ($anomayor && $anomayor != ""))
+				$fechamayor = "$anomayor-$mesmayor-$diamayor 00:00:00";
+			else
+				$fechamayor = $fechamenor;
+
+			if($ret == "")
+				$ret .= "fecha >= '$fechamenor' and fecha <= '$fechamayor'";
+			else
+				$ret .= " and fecha >= '$fechamenor' and fecha <= '$fechamayor'";
 		}
 
 		

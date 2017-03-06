@@ -1,4 +1,3 @@
-<pre>{$having}</pre>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
 		<div class="col-md-2" id="filtros">
@@ -20,7 +19,7 @@
 					</div>
 					<div class="grupo_filtros">
 						Referencia<br />
-						<input type="text" name="freferencia" id="freferencia" placeholder="referencia" value="{$freferencia}" />
+						<input type="text" name="freferencia" id="freferencia" value="{$freferencia}" />
 					</div>
 					<div class="grupo_filtros">
 						Provincia<br />
@@ -51,7 +50,16 @@
 					</div>
 					<div class="grupo_filtros">
 						Precio entre<br />
-						<input type="text" name="preciomayor" id="preciomayor" /> y <input type="text" name="preciomenor" id="preciomenor" />
+						<input type="text" name="preciomayor" id="preciomayor" value="{$preciomayor}" /> y <input type="text" name="preciomenor" id="preciomenor" value="{$preciomenor}" />
+					</div>
+					<div class="grupo_filtros grupo_fechas">
+						Fecha entre<br />
+						<input type="text" name="diamenor" id="diamenor" placeholder="dd" value="{$diamenor}" />/
+						<input type="text" name="mesmenor" id="mesmenor" placeholder="mm" value="{$mesmenor}" />/
+						<input type="text" name="anomenor" id="anomenor" placeholder="aaaa" value="{$anomenor}" /> y
+						<input type="text" name="diamayor" id="diamayor" placeholder="dd" value="{$diamayor}" />/
+						<input type="text" name="mesmayor" id="mesmayor" placeholder="mm" value="{$mesmayor}" />/
+						<input type="text" name="anomayor" id="anomayor" placeholder="aaaa" value="{$anomayor}" />
 					</div>
 					<div class="grupo_filtros">
 						Activa<br />
