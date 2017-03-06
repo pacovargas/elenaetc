@@ -78,14 +78,14 @@
 							<img src="{$base_url}img/propiedades/{$foto.nombre}" class="img-responsive" />
 						</div>
 					{/foreach}
-					<div class="col-xs-12" id="formulario-subir">
-						<form enctype="multipart/form-data" action="{$current_url}" method="POST" name="subir-foto" id="subir-foto">
-							<p>Subir nueva foto:</p>
-							<input name="foto" type="file" />
-   							<input type="submit" value="subir" class="boton" name="subir" />
-						</form>
-					</div>
 				{/if}
+				<div class="col-xs-12" id="formulario-subir">
+					<form enctype="multipart/form-data" action="{$current_url}" method="POST" name="subir-foto" id="subir-foto">
+						<p>Subir nueva foto:</p>
+						<input name="foto" type="file" />
+							<input type="submit" value="subir" class="boton" name="subir" />
+					</form>
+				</div>
 			</div>
 		{/if}
 </div>
