@@ -1,1 +1,45 @@
-body{}
+div.foto{
+  height: auto !important;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div.carrusel-fotos{
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+div.foto img{
+  height: 200px;
+}
+
+div.fila-datos{
+  margin-bottom: 25px;
+}
+
+button.slick-prev:before{
+  content: url(../img/slide-prev.png);
+}
+
+button.slick-prev{
+  left: 6px;
+  top: 35%;
+}
+
+button.slick-next{
+  right: 6px;
+  top: 35%;
+}
+
+button.slick-next:before{
+  content: url(../img/slide-next.png);
+}
+
+h2{
+  margin-bottom: 30px;
+}
+
+.alreves{
+  transform: rotateY(180deg);
+  display: inline-block;
+}

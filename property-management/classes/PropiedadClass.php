@@ -14,6 +14,8 @@ class Propiedad{
 	public $nombre_municipio;
 	public $nombre_regimen;
 	public $nombre_tipo;
+	public $fotos;
+	public $doc;
 
 	public function __construct($nombre, $referencia, $tipo, $municipio, $provincia, $regimen, $precio, $fecha = "", $activa = 1, $id = 0){
 		$this->id = $id;
@@ -30,6 +32,8 @@ class Propiedad{
 		$this->nombre_municipio = Municipio::getNombrebyId($this->municipio);
 		$this->nombre_regimen = Regimen::getNombrebyId($this->regimen);
 		$this->nombre_tipo = Tipo::getNombrebyId($this->tipo);
+		$this->fotos = Propiedad::getFotos($id);
+		$this->doc = Propiedad::getDocs($id);
 	}
 
 	public function save(){
