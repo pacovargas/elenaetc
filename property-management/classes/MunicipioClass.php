@@ -31,4 +31,13 @@ class Municipio{
 		$sql = "select * from municipios order by nombre asc";
 		return $db->query($sql);
 	}
+
+	public static function getExistingMunicipios(){
+		$db = new DataBase();
+		$sql = "select distinct m.id, m.nombre
+		from propiedades as p
+		join municipios as m on p.municipio = m.id
+		order by m.nombre asc";
+		return $db->query($sql);	
+	}
 }

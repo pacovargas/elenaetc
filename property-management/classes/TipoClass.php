@@ -17,4 +17,13 @@ class Tipo{
 		else
 			return false;
 	}
+
+	public static function getExistingTipos(){
+		$db = new DataBase();
+		$sql = "select distinct m.id, m.nombre
+		from propiedades as p
+		join tipos as m on p.tipo = m.id
+		order by m.nombre asc";
+		return $db->query($sql);	
+	}
 }

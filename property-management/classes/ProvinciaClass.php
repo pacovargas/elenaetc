@@ -17,4 +17,13 @@ class Provincia{
 		else
 			return false;
 	}
+
+	public static function getExistingProvincias(){
+		$db = new DataBase();
+		$sql = "select distinct m.id, m.nombre
+		from propiedades as p
+		join provincias as m on p.provincia = m.id
+		order by m.nombre asc";
+		return $db->query($sql);	
+	}
 }

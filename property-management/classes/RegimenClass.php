@@ -17,4 +17,13 @@ class Regimen{
 		else
 			return false;
 	}
+
+	public static function getExistingRegimenes(){
+		$db = new DataBase();
+		$sql = "select distinct m.id, m.nombre
+		from propiedades as p
+		join regimenes as m on p.regimen = m.id
+		order by m.nombre asc";
+		return $db->query($sql);	
+	}
 }
