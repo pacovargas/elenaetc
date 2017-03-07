@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-07 23:10:38
+/* Smarty version 3.1.30, created on 2017-03-07 23:35:09
   from "/Users/paco/repos/elenaetc/property-management/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bf2fde7dff46_38216468',
+  'unifunc' => 'content_58bf359d795334_50952363',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6ee3e3eb67614bd72984deaa3716f3403f3625bf' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/index.tpl',
-      1 => 1488924632,
+      1 => 1488926102,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bf2fde7dff46_38216468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bf359d795334_50952363 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container">
 	<div class="row text-center">
@@ -80,7 +80,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 						<div class="enlaces-datos flex-parent">
 							<div class="sobre flex-child"><a href="#" class="negro"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
 							<div class="enlace-info naranja flex-child"><a href="#">solicitud de información</a></div>
-							<div class="enlace-docu naranja flex-child"><a class="naranja" href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
+							<?php if ($_smarty_tpl->tpl_vars['prop']->value->doc) {?>
+								<div class="enlace-docu naranja flex-child"><a class="naranja" href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+docs/<?php echo $_smarty_tpl->tpl_vars['prop']->value->doc['nombre'];?>
+"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
+							<?php }?>
 						</div>
 					</div>
 				</div>

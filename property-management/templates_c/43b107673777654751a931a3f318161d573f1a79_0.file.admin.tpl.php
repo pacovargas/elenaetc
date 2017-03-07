@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-05 21:13:55
+/* Smarty version 3.1.30, created on 2017-03-07 23:22:35
   from "/Users/paco/repos/elenaetc/property-management/templates/admin.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bc7183e65e39_18633396',
+  'unifunc' => 'content_58bf32ab520619_60072043',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '43b107673777654751a931a3f318161d573f1a79' => 
     array (
       0 => '/Users/paco/repos/elenaetc/property-management/templates/admin.tpl',
-      1 => 1488744822,
+      1 => 1488921871,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bc7183e65e39_18633396 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bf32ab520619_60072043 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<pre><?php echo $_smarty_tpl->tpl_vars['having']->value;?>
-</pre>
 <div class="container-fluid cuerpo-admin">
 	<div class="row">
 		<div class="col-md-2" id="filtros">
@@ -47,8 +45,28 @@ function content_58bc7183e65e39_18633396 (Smarty_Internal_Template $_smarty_tpl)
 					</div>
 					<div class="grupo_filtros">
 						Referencia<br />
-						<input type="text" name="freferencia" id="freferencia" placeholder="referencia" value="<?php echo $_smarty_tpl->tpl_vars['freferencia']->value;?>
+						<input type="text" name="freferencia" id="freferencia" value="<?php echo $_smarty_tpl->tpl_vars['freferencia']->value;?>
 " />
+					</div>
+					<div class="grupo_filtros">
+						Tipo<br />
+						<select name="ftipo" id="ftipo">
+							<option value="0"></option>
+							<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['tipos']->value, 'tipo');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['tipo']->value) {
+?>
+								<option value="<?php echo $_smarty_tpl->tpl_vars['tipo']->value['id'];?>
+" <?php if ($_smarty_tpl->tpl_vars['tipo']->value['id'] === $_smarty_tpl->tpl_vars['ftipo']->value) {?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['tipo']->value['nombre'];?>
+</option>
+							<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+						</select>
 					</div>
 					<div class="grupo_filtros">
 						Provincia<br />
@@ -112,7 +130,24 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 					</div>
 					<div class="grupo_filtros">
 						Precio entre<br />
-						<input type="text" name="preciomayor" id="preciomayor" /> y <input type="text" name="preciomenor" id="preciomenor" />
+						<input type="text" name="preciomayor" id="preciomayor" value="<?php echo $_smarty_tpl->tpl_vars['preciomayor']->value;?>
+" /> y <input type="text" name="preciomenor" id="preciomenor" value="<?php echo $_smarty_tpl->tpl_vars['preciomenor']->value;?>
+" />
+					</div>
+					<div class="grupo_filtros grupo_fechas">
+						Fecha entre<br />
+						<input type="text" name="diamenor" id="diamenor" placeholder="dd" value="<?php echo $_smarty_tpl->tpl_vars['diamenor']->value;?>
+" />/
+						<input type="text" name="mesmenor" id="mesmenor" placeholder="mm" value="<?php echo $_smarty_tpl->tpl_vars['mesmenor']->value;?>
+" />/
+						<input type="text" name="anomenor" id="anomenor" placeholder="aaaa" value="<?php echo $_smarty_tpl->tpl_vars['anomenor']->value;?>
+" /> y
+						<input type="text" name="diamayor" id="diamayor" placeholder="dd" value="<?php echo $_smarty_tpl->tpl_vars['diamayor']->value;?>
+" />/
+						<input type="text" name="mesmayor" id="mesmayor" placeholder="mm" value="<?php echo $_smarty_tpl->tpl_vars['mesmayor']->value;?>
+" />/
+						<input type="text" name="anomayor" id="anomayor" placeholder="aaaa" value="<?php echo $_smarty_tpl->tpl_vars['anomayor']->value;?>
+" />
 					</div>
 					<div class="grupo_filtros">
 						Activa<br />
@@ -181,6 +216,21 @@ if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } e
 }?>">
 									referencia
 									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'referencia') {?>
+										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										<?php } else { ?>
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										<?php }?>
+									<?php }?>
+								</a>
+							</th>
+							<th>
+								<a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/orderby=tipo<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'tipo') {
+if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'asc') {?>&ascdesc=desc<?php } else { ?>&ascdesc=asc<?php }
+}?>">
+									tipo
+									<?php if ($_smarty_tpl->tpl_vars['orderby']->value == 'tipo') {?>
 										<?php if ($_smarty_tpl->tpl_vars['ascdesc']->value == 'desc') {?>
 											<i class="fa fa-caret-down" aria-hidden="true"></i>
 										<?php } else { ?>
@@ -294,6 +344,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['prop']->value) {
 								<td><?php echo $_smarty_tpl->tpl_vars['prop']->value->nombre;?>
 </td>
 								<td><?php echo $_smarty_tpl->tpl_vars['prop']->value->referencia;?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['prop']->value->nombre_tipo;?>
 </td>
 								<td><?php echo $_smarty_tpl->tpl_vars['prop']->value->nombre_provincia;?>
 </td>

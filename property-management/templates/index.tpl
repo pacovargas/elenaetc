@@ -32,7 +32,9 @@
 						<div class="enlaces-datos flex-parent">
 							<div class="sobre flex-child"><a href="#" class="negro"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
 							<div class="enlace-info naranja flex-child"><a href="#">solicitud de información</a></div>
-							<div class="enlace-docu naranja flex-child"><a class="naranja" href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
+							{if $prop->doc}
+								<div class="enlace-docu naranja flex-child"><a class="naranja" href="{$base_url}docs/{$prop->doc.nombre}"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
+							{/if}
 						</div>
 					</div>
 				</div>
