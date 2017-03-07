@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-07 12:08:57
+/* Smarty version 3.1.30, created on 2017-03-07 14:00:22
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58be94c97f9918_19212203',
+  'unifunc' => 'content_58beaee64bcde3_99937611',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488884933,
+      1 => 1488891614,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,10 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58be94c97f9918_19212203 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58beaee64bcde3_99937611 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
+<pre><?php echo print_r($_smarty_tpl->tpl_vars['docs']->value);?>
+</pre>
 <div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
 		<div class="row panel error-panel">
@@ -187,6 +189,30 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 						<input type="submit" value="subir" class="boton" name="subir" />
 					</form>
 				</div>
+			</div>
+
+			<div class="row panel">
+				<div class="col-xs-12 panel-heading">
+					<i class="fa fa-file-pdf-o" aria-hidden="true"></i> Documentación
+				</div>
+				<?php if (!$_smarty_tpl->tpl_vars['docs']->value) {?>
+					<div class="col-xs-12" id="formulario-doc">
+						<form enctype="multipart/form-data" action="<?php echo $_smarty_tpl->tpl_vars['current_url']->value;?>
+" method="POST" name="subir-doc" id="subir-doc">
+							<p>Subir documentación:</p>
+							<input name="doc" type="file" />
+							<input type="submit" value="subir" class="boton" name="subir-doc" />
+						</form>
+					</div>
+				<?php } else { ?>
+					<div class="col-xs-12" id="docus">
+						<i class="fa fa-file-pdf-o" aria-hidden="true"></i> <?php echo $_smarty_tpl->tpl_vars['docs']->value['nombre'];?>
+ - <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+admin/accion=eliminardoc&doc=<?php echo $_smarty_tpl->tpl_vars['docs']->value['id'];?>
+&propiedad=<?php echo $_smarty_tpl->tpl_vars['docs']->value['propiedad'];?>
+" class="confirmar" data-confirm-msg="Se va a eliminar el documento"><i class="fa fa-times" aria-hidden="true"></i>Eliminar</a>
+					</div>
+				<?php }?>
 			</div>
 		<?php }?>
 </div>

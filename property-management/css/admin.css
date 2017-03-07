@@ -143,15 +143,18 @@ table th a:hover{
   object-fit: cover;
 }
 
-#formulario-subir p{
+#formulario-subir p,
+#formulario-doc p{
   font-size: 18px;
 }
 
-#formulario-subir input[type='submit']{
+#formulario-subir input[type='submit'],
+#formulario-doc input[type='submit']{
   margin-top: 15px;
 }
 
-#formulario-subir{
+#formulario-subir,
+#formulario-doc{
   border-top: 1px solid #CBC3C6;
   padding-top: 20px;
 }
@@ -178,4 +181,8 @@ table th a:hover{
 
 .grupo_fechas input{
   width: 13% !important;
+}
+
+#docus{
+  font-size: 18px;
 }

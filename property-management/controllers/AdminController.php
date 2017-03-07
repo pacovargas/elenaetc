@@ -60,6 +60,7 @@ class AdminController extends Controller{
 					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
 					"accion" => Tools::getValue('accion'),
 					"fotos" => Propiedad::getFotos(Tools::getValue('propiedad')),
+					"docs" => Propiedad::getDocs(Tools::getValue('propiedad')),
 				));	
 			}
 
@@ -91,9 +92,11 @@ class AdminController extends Controller{
 					Propiedad::addFoto(Tools::getValue("propiedad"), $_FILES['foto']['name'], $_FILES['foto']['tmp_name']);
 					Tools::redirect(Tools::getCurrentUrl());
 				}
-				else{
-					$admintpl = "crear-propiedad.tpl";
+				if(Tools::getValue("subir-doc") == "subir"){
+					Propiedad::addDoc(Tools::getValue("propiedad"), $_FILES['doc']['name'], $_FILES['doc']['tmp_name']);
+					Tools::redirect(Tools::getCurrentUrl());
 				}
+				$admintpl = "crear-propiedad.tpl";
 			}
 
 		}
@@ -109,6 +112,11 @@ class AdminController extends Controller{
 					Tools::redirect(Tools::getBaseUrl() . "admin/accion=actualizar&propiedad=$propiedad");
 				}
 				else{
+					if(Tools::getValue("accion") == "eliminardoc"){
+						$propiedad = Tools::getValue("propiedad");
+						Propiedad::removeDoc(Tools::getValue("doc"));
+						Tools::redirect(Tools::getBaseUrl() . "admin/accion=actualizar&propiedad=$propiedad");
+					}
 					$having = "";
 					if(Tools::getValue("filtrar") == "filtrar"){
 						$having = $this->getHaving();

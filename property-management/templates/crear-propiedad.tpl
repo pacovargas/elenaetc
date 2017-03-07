@@ -99,6 +99,25 @@
 					</form>
 				</div>
 			</div>
+
+			<div class="row panel">
+				<div class="col-xs-12 panel-heading">
+					<i class="fa fa-file-pdf-o" aria-hidden="true"></i> Documentación
+				</div>
+				{if !$docs}
+					<div class="col-xs-12" id="formulario-doc">
+						<form enctype="multipart/form-data" action="{$current_url}" method="POST" name="subir-doc" id="subir-doc">
+							<p>Subir documentación:</p>
+							<input name="doc" type="file" />
+							<input type="submit" value="subir" class="boton" name="subir-doc" />
+						</form>
+					</div>
+				{else}
+					<div class="col-xs-12" id="docus">
+						<i class="fa fa-file-pdf-o" aria-hidden="true"></i> {$docs.nombre} - <a href="{$base_url}admin/accion=eliminardoc&doc={$docs.id}&propiedad={$docs.propiedad}" class="confirmar" data-confirm-msg="Se va a eliminar el documento"><i class="fa fa-times" aria-hidden="true"></i>Eliminar</a>
+					</div>
+				{/if}
+			</div>
 		{/if}
 </div>
 

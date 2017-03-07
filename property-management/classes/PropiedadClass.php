@@ -151,4 +151,34 @@ class Propiedad{
 		}
 
 	}
+
+	public static function addDoc($id, $nombreOriginal, $nombreSubido){
+		$extension = Tools::getFileExtension($nombreOriginal);
+		$nombre_archivo = "prop$id.$extension";
+		$ruta = "docs/$nombre_archivo";
+		if (move_uploaded_file($nombreSubido, $ruta)){
+			$db = new DataBase();
+			$sql = "insert into docs (nombre, propiedad) values ('$nombre_archivo', $id)";
+			$db->update($sql);
+		}
+	}
+
+	public static function getDocs($id){
+		$db = new DataBase();
+		$sql = "select * from docs where propiedad = $id";
+		return $db->query($sql)[0];
+	}
+
+	public static function removeDoc($id){
+		$db = new DataBase();
+		$sql = "select nombre from docs where id = $id";
+		if($resultado = $db->query($sql)){
+			$archivo = $resultado[0]["nombre"];
+			if(unlink("docs/$archivo")){
+				$sql = "delete from docs where id = $id";
+				$db->update($sql);
+			}
+		}
+
+	}
 }
