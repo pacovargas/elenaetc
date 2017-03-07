@@ -16,6 +16,7 @@ class Propiedad{
 	public $nombre_tipo;
 	public $fotos;
 	public $doc;
+	public $precio_formateado;
 
 	public function __construct($nombre, $referencia, $tipo, $municipio, $provincia, $regimen, $precio, $fecha = "", $activa = 1, $id = 0){
 		$this->id = $id;
@@ -34,6 +35,7 @@ class Propiedad{
 		$this->nombre_tipo = Tipo::getNombrebyId($this->tipo);
 		$this->fotos = Propiedad::getFotos($id);
 		$this->doc = Propiedad::getDocs($id);
+		$this->precio_formateado = number_format($this->precio, 0, ",", "." );
 	}
 
 	public function save(){

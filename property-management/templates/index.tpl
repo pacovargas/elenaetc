@@ -23,7 +23,17 @@
 						{/if}
 					</div>
 					<div class="col-sm-5 datos">
-						datos
+						<h3 class="champan-bold naranja no-margin-top">{$prop->nombre}</h3>
+						<p>Referencia nº {$prop->referencia}</p>
+						<p class="capital">{$prop->nombre_tipo}</p>
+						<p>{$prop->nombre_municipio} ({$prop->nombre_provincia})</p>
+						<p class="capital">{$prop->nombre_regimen}</p>
+						<p>{$prop->precio_formateado} Euros</p>
+						<div class="enlaces-datos flex-parent">
+							<div class="sobre flex-child"><a href="#" class="negro"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
+							<div class="enlace-info naranja flex-child"><a href="#">solicitud de información</a></div>
+							<div class="enlace-docu naranja flex-child"><a class="naranja" href="#"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
+						</div>
 					</div>
 				</div>
 			{/foreach}
