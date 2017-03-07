@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-06 20:20:23
+/* Smarty version 3.1.30, created on 2017-03-07 12:08:57
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58bdb677ced575_52052401',
+  'unifunc' => 'content_58be94c97f9918_19212203',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488828018,
+      1 => 1488884933,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58bdb677ced575_52052401 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58be94c97f9918_19212203 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
@@ -41,6 +41,7 @@ function content_58bdb677ced575_52052401 (Smarty_Internal_Template $_smarty_tpl)
 			<div class="col-md-4 text-right etiquetas hidden-xs">
 				<label for="nombre">Nombre</label>
 				<label for="referencia">Referencia</label>
+				<label for="tipo">Tipo</label>
 				<label for="provincia">Provincia</label>
 				<label for="municipio">Municipio</label>
 				<label for="régimen">Régimen</label>
@@ -53,6 +54,28 @@ function content_58bdb677ced575_52052401 (Smarty_Internal_Template $_smarty_tpl)
 " />
 				<input type="text" name="referencia" id="referencia" placeholder="Referencia" value="<?php echo $_smarty_tpl->tpl_vars['referencia']->value;?>
 " />
+				<select name="tipo" id="tipo">
+					<?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['tipos']->value, 'tipo');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['tipo']->value) {
+?>
+						<?php if ($_smarty_tpl->tpl_vars['id_tipo']->value && $_smarty_tpl->tpl_vars['tipo']->value['id'] === $_smarty_tpl->tpl_vars['id_tipo']->value) {?>
+							<option value="<?php echo $_smarty_tpl->tpl_vars['tipo']->value['id'];?>
+" selected="selected"><?php echo $_smarty_tpl->tpl_vars['tipo']->value['nombre'];?>
+</option>
+						<?php } else { ?>
+							<option value="<?php echo $_smarty_tpl->tpl_vars['tipo']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['tipo']->value['nombre'];?>
+</option>
+						<?php }?>
+					<?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
+?>
+
+				</select>
 				<select name="provincia" id="provincia">
 					<?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['provincias']->value, 'provincia');
@@ -119,7 +142,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
 			<div class="col-xs-12 text-right capa-botones">
 				<input type="submit" name="accion-formulario" value="<?php echo $_smarty_tpl->tpl_vars['accion']->value;?>
 " class="boton" />
-				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
+				<input type="button" name="cancelar" id="cancelar" value="volver" class="boton" />
 			</div>
 		</div>
 	</form>

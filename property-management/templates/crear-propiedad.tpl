@@ -15,6 +15,7 @@
 			<div class="col-md-4 text-right etiquetas hidden-xs">
 				<label for="nombre">Nombre</label>
 				<label for="referencia">Referencia</label>
+				<label for="tipo">Tipo</label>
 				<label for="provincia">Provincia</label>
 				<label for="municipio">Municipio</label>
 				<label for="régimen">Régimen</label>
@@ -24,6 +25,15 @@
 				<input type="hidden" name="id_propiedad" id="id_propiedad" value="{$id_propiedad}" />
 				<input type="text" name="nombre" id="nombre" placeholder="Nombre" value="{$nombre}" />
 				<input type="text" name="referencia" id="referencia" placeholder="Referencia" value="{$referencia}" />
+				<select name="tipo" id="tipo">
+					{foreach from=$tipos item=tipo}
+						{if $id_tipo && $tipo['id'] === $id_tipo}
+							<option value="{$tipo['id']}" selected="selected">{$tipo['nombre']}</option>
+						{else}
+							<option value="{$tipo['id']}">{$tipo['nombre']}</option>
+						{/if}
+					{/foreach}
+				</select>
 				<select name="provincia" id="provincia">
 					{foreach from=$provincias item=provincia}
 						{if !$id_provincia}
@@ -58,7 +68,7 @@
 		<div class="row">
 			<div class="col-xs-12 text-right capa-botones">
 				<input type="submit" name="accion-formulario" value="{$accion}" class="boton" />
-				<input type="button" name="cancelar" id="cancelar" value="cancelar" class="boton" />
+				<input type="button" name="cancelar" id="cancelar" value="volver" class="boton" />
 			</div>
 		</div>
 	</form>

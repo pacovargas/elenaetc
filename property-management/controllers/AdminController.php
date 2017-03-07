@@ -31,12 +31,14 @@ class AdminController extends Controller{
 					"regimenes" => Regimen::getRegimenes(),
 					"provincias" => Provincia::getProvincias(),
 					"municipios" => Municipio::getMunicipiosByProvincias(),
+					"tipos" => Tipo::getTipos(),
 					"nombre" => isset($_POST['nombre']) ? $_POST["nombre"] : false,
 					"referencia" => isset($_POST['referencia']) ? $_POST["referencia"] : false,
 					"precio" => isset($_POST['precio']) ? $_POST["precio"] : false,
 					"id_provincia" => isset($_POST['provincia']) ? $_POST["provincia"] : false,
 					"id_municipio" => isset($_POST['municipio']) ? $_POST["municipio"] : false,
 					"id_regimen" => isset($_POST['regimen']) ? $_POST["regimen"] : false,
+					"id_tipo" => isset($_POST['tipo']) ? $_POST["tipo"] : false,
 					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
 					"accion" => Tools::getValue('accion'),
 				));
@@ -47,12 +49,14 @@ class AdminController extends Controller{
 					"regimenes" => Regimen::getRegimenes(),
 					"provincias" => Provincia::getProvincias(),
 					"municipios" => Municipio::getMunicipiosByProvincias(),
+					"tipos" => Tipo::getTipos(),
 					"nombre" => $propiedad->nombre,
 					"referencia" => $propiedad->referencia,
 					"precio" => $propiedad->precio,
 					"id_provincia" => $propiedad->provincia,
 					"id_municipio" => $propiedad->municipio,
 					"id_regimen" => $propiedad->regimen,
+					"id_tipo" => $propiedad->tipo,
 					"id_propiedad" => Tools::getValue('propiedad') ? Tools::getValue('propiedad') : 0,
 					"accion" => Tools::getValue('accion'),
 					"fotos" => Propiedad::getFotos(Tools::getValue('propiedad')),
@@ -63,7 +67,7 @@ class AdminController extends Controller{
 				$errores = $this->validarFormulario($_POST["nombre"], $_POST["referencia"], $_POST["precio"]);
 				if($errores === false){
 					if(Tools::getValue("accion-formulario") == "crear")	
-						$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
+						$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["tipo"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
 					else
 						$propiedad = Propiedad::getPropiedadById(Tools::getValue('id_propiedad'));
 
@@ -130,9 +134,11 @@ class AdminController extends Controller{
 						"regimenes" => Regimen::getRegimenes(),
 						"provincias" => Provincia::getProvincias(),
 						"municipios" => Municipio::getAllMunicipios(),
+						"tipos" => Tipo::getTipos(),
 						"fprovincia" => isset($_POST['fprovincia']) ? $_POST["fprovincia"] : false,
 						"fmunicipio" => isset($_POST['fmunicipio']) ? $_POST["fmunicipio"] : false,
 						"fregimen" => isset($_POST['fregimen']) ? $_POST["fregimen"] : false,
+						"ftipo" => isset($_POST['ftipo']) ? $_POST["ftipo"] : false,
 						"preciomayor" => isset($_POST['preciomayor']) ? $_POST["preciomayor"] : false,
 						"preciomenor" => isset($_POST['preciomenor']) ? $_POST["preciomenor"] : false,
 						"diamenor" => isset($_POST['diamenor']) ? $_POST["diamenor"] : false,
@@ -248,6 +254,12 @@ class AdminController extends Controller{
 				$ret .= $valores_activa[Tools::getValue("factiva")];
 			else
 				$ret .= " and " . $valores_activa[Tools::getValue("factiva")];
+
+		if(Tools::getValue("ftipo") !== false && intval(Tools::getValue("ftipo")) > 0)
+			if($ret == "")
+				$ret .= "tipo = " . Tools::getValue("ftipo");
+			else
+				$ret .= " and tipo = " . Tools::getValue("ftipo");
 
 		if(Tools::getValue("fprovincia") !== false && intval(Tools::getValue("fprovincia")) > 0)
 			if($ret == "")

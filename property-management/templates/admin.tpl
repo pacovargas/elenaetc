@@ -22,6 +22,15 @@
 						<input type="text" name="freferencia" id="freferencia" value="{$freferencia}" />
 					</div>
 					<div class="grupo_filtros">
+						Tipo<br />
+						<select name="ftipo" id="ftipo">
+							<option value="0"></option>
+							{foreach from=$tipos item=tipo}
+								<option value="{$tipo.id}" {if $tipo.id === $ftipo}selected="selected"{/if}>{$tipo.nombre}</option>
+							{/foreach}
+						</select>
+					</div>
+					<div class="grupo_filtros">
 						Provincia<br />
 						<select name="fprovincia" id="fprovincia">
 							<option value="0"></option>
@@ -127,6 +136,18 @@
 								</a>
 							</th>
 							<th>
+								<a href="{$base_url}admin/orderby=tipo{if $orderby=='tipo'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
+									tipo
+									{if $orderby=='tipo'}
+										{if $ascdesc=='desc'}
+											<i class="fa fa-caret-down" aria-hidden="true"></i>
+										{else}
+											<i class="fa fa-caret-up" aria-hidden="true"></i>
+										{/if}
+									{/if}
+								</a>
+							</th>
+							<th>
 								<a href="{$base_url}admin/orderby=provincia{if $orderby=='provincia'}{if $ascdesc=='asc'}&ascdesc=desc{else}&ascdesc=asc{/if}{/if}">
 									provincia
 									{if $orderby=='provincia'}
@@ -207,6 +228,7 @@
 								<td class="text-center">{$prop->id}</td>
 								<td>{$prop->nombre}</td>
 								<td>{$prop->referencia}</td>
+								<td>{$prop->nombre_tipo}</td>
 								<td>{$prop->nombre_provincia}</td>
 								<td>{$prop->nombre_municipio}</td>
 								<td>{$prop->nombre_regimen}</td>
