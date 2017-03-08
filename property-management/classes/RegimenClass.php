@@ -18,12 +18,21 @@ class Regimen{
 			return false;
 	}
 
-	public static function getExistingRegimenes(){
+	public static function getExistingRegimenes($solo_activas = false){
 		$db = new DataBase();
-		$sql = "select distinct m.id, m.nombre
-		from propiedades as p
-		join regimenes as m on p.regimen = m.id
-		order by m.nombre asc";
+		if($solo_activas){
+			$sql = "select distinct m.id, m.nombre
+			from propiedades as p
+			join regimenes as m on p.regimen = m.id
+			order by m.nombre asc";
+		}
+		else{
+			$sql = "select distinct m.id, m.nombre
+			from propiedades as p
+			join regimenes as m on p.regimen = m.id
+			and p.activa = 1
+			order by m.nombre asc";	
+		}
 		return $db->query($sql);	
 	}
 }

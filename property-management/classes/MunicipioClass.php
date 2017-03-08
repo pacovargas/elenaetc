@@ -32,12 +32,42 @@ class Municipio{
 		return $db->query($sql);
 	}
 
-	public static function getExistingMunicipios(){
+	public static function getExistingMunicipios($solo_activas = false){
 		$db = new DataBase();
-		$sql = "select distinct m.id, m.nombre
+		if($solo_activas){
+			$sql = "select distinct m.id, m.nombre, m.provincia
+			from propiedades as p
+			join municipios as m on p.municipio = m.id
+			and p.activa = 1
+			order by m.nombre asc";
+		}
+		else{
+			$sql = "select distinct m.id, m.nombre, m.provincia
+			from propiedades as p
+			join municipios as m on p.municipio = m.id
+			order by m.nombre asc";	
+		}
+		return $db->query($sql);	
+	}
+
+	public static function getExistingMunicipiosByProvincias(){
+		$db = new DataBase();
+		$sql = "select distinct m.id, m.nombre, m.provincia
 		from propiedades as p
 		join municipios as m on p.municipio = m.id
+		and p.activa = 1
 		order by m.nombre asc";
-		return $db->query($sql);	
+		if($resultado = $db->query($sql)){
+			$ret = array();
+			foreach ($resultado as $mun){
+				$ret[$mun['provincia']][] = array(
+					"id" => $mun["id"],
+					"nombre" => $mun["nombre"]
+				);
+			}
+			return $ret;
+		}
+		else
+			return false;
 	}
 }

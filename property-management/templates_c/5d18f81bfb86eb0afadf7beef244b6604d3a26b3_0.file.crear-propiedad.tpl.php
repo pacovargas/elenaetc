@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-07 14:00:22
+/* Smarty version 3.1.30, created on 2017-03-08 12:17:58
   from "/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58beaee64bcde3_99937611',
+  'unifunc' => 'content_58bfe866ce2723_33091874',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5d18f81bfb86eb0afadf7beef244b6604d3a26b3' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/crear-propiedad.tpl',
-      1 => 1488891614,
+      1 => 1488891740,
       2 => 'file',
     ),
   ),
@@ -20,10 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58beaee64bcde3_99937611 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58bfe866ce2723_33091874 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
-<pre><?php echo print_r($_smarty_tpl->tpl_vars['docs']->value);?>
-</pre>
 <div class="container cuerpo-admin" id="plantilla-create">
 	<?php if ($_smarty_tpl->tpl_vars['errores']->value !== false) {?>
 		<div class="row panel error-panel">
