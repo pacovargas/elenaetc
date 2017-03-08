@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-03-08 19:51:45
+/* Smarty version 3.1.30, created on 2017-03-08 20:12:20
   from "/home/paco/repos/elenaetc/property-management/templates/index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58c052c16cc515_90775639',
+  'unifunc' => 'content_58c05794c10d90_00800761',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c2f4634fff9138b67db81f4de8b324e69d0eb501' => 
     array (
       0 => '/home/paco/repos/elenaetc/property-management/templates/index.tpl',
-      1 => 1488999083,
+      1 => 1489000303,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58c052c16cc515_90775639 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58c05794c10d90_00800761 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/javascript">
 	var municipios = <?php echo json_encode($_smarty_tpl->tpl_vars['municipios']->value);?>
@@ -29,8 +29,7 @@ echo '<script'; ?>
 
 <?php echo '</script'; ?>
 >
-<pre><?php echo $_smarty_tpl->tpl_vars['num_paginas']->value;?>
-</pre>
+
 <div class="container">
 	<div class="row text-center">
 		<div class="col-xs-12">
@@ -177,7 +176,10 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl);
  Euros</p>
 							<div class="enlaces-datos flex-parent">
 								<div class="sobre flex-child"><a href="#" class="negro"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
-								<div class="enlace-info naranja flex-child"><a href="#">solicitud de información</a></div>
+								<div class="enlace-info naranja flex-child"><a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+solicitud/nombre=<?php echo $_smarty_tpl->tpl_vars['prop']->value->nombre;?>
+&ref=<?php echo $_smarty_tpl->tpl_vars['prop']->value->referencia;?>
+">solicitud de información</a></div>
 								<?php if ($_smarty_tpl->tpl_vars['prop']->value->doc) {?>
 									<div class="enlace-docu naranja flex-child"><a class="naranja" href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
 docs/<?php echo $_smarty_tpl->tpl_vars['prop']->value->doc['nombre'];?>

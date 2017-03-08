@@ -2,7 +2,7 @@
 	var municipios = {$municipios|json_encode}
 	var id_municipio = {$id_municipio|json_encode}
 </script>
-<pre>{$num_paginas}</pre>
+
 <div class="container">
 	<div class="row text-center">
 		<div class="col-xs-12">
@@ -89,7 +89,7 @@
 							<p>{$prop->precio_formateado} Euros</p>
 							<div class="enlaces-datos flex-parent">
 								<div class="sobre flex-child"><a href="#" class="negro"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></div>
-								<div class="enlace-info naranja flex-child"><a href="#">solicitud de información</a></div>
+								<div class="enlace-info naranja flex-child"><a href="{$base_url}solicitud/nombre={$prop->nombre}&ref={$prop->referencia}">solicitud de información</a></div>
 								{if $prop->doc}
 									<div class="enlace-docu naranja flex-child"><a class="naranja" href="{$base_url}docs/{$prop->doc.nombre}"><i class="fa fa-file-text" aria-hidden="true"></i></a></div>
 								{/if}
