@@ -1,1 +1,44 @@
-body{}
+h2{
+  font-size: 46px;
+  margin-bottom: 50px;
+  
+}
+
+#volver{
+  float: right;
+}
+
+label{
+  width: 30%;
+  font-weight: normal;
+}
+
+input,
+textarea{
+  width: 69%
+}
+
+textarea{
+  border: 1px solid #d3c5cb;
+  height: 180px;
+}
+
+input{
+  height: 40px;
+}
+
+.grupo-formulario{
+  margin-bottom: 20px;
+}
+
+#enviar{
+  margin-left: 30%;
+}
+
+textarea{
+  vertical-align: top
+}
+
+label[for='comentarios']{
+  padding-top: 10px;
+}

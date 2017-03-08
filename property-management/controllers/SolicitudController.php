@@ -18,6 +18,10 @@ class SolicitudController extends Controller{
 	}
 
 	public function initContent(){
+		$this->smarty->assign(array(
+			"nombre" => Tools::getValue("nombre"),
+			"ref" => Tools::getValue("ref"), 
+		));
 		$this->tpl = "solicitud.tpl";
 	}
 }
