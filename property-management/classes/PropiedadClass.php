@@ -185,6 +185,38 @@ class Propiedad{
 				$db->update($sql);
 			}
 		}
+	}
 
+	public static function getPropiedadesPaginada($having = "", $registros=3, $pagina=1, $orderby = "id", $ascdesc = "desc"){
+		$comienzo = $registros * ($pagina-1);
+		$db = new DataBase();
+		if($having == "") $having = "having activa = 1";
+		$sql = "select * from propiedades $having order by $orderby $ascdesc limit $comienzo, $registros";
+
+		if($res = $db->query($sql)){
+			$props = array();
+			foreach ($res as $r){
+				$p = new Propiedad($r["nombre"], $r["referencia"], $r["tipo"], $r["municipio"], $r["provincia"], $r["regimen"], $r["precio"], $r["fecha"], $r["activa"], $r["id"]);
+				$props[] = $p;
+			}
+			return $props;
+		}
+		else{
+			return false;
+		}
+	}
+
+	public static function getNumPaginas($having = "", $registros=3){
+		$db = new DataBase();
+		$sql = "select count(*) as num from propiedades $having";
+		if($resultado = $db->query($sql)){
+			$total_registros = $resultado[0]["num"];
+			$paginas = $total_registros / $registros;
+		}
+		else{
+			$paginas = 0;
+		}
+
+		return intval($paginas);
 	}
 }

@@ -21,7 +21,10 @@ class IndexController extends Controller{
 
 	public function initContent(){
 		$having = $this->getHaving();
-		$propiedades = Propiedad::getPropiedades($having);
+		$pagina = Tools::getValue("pagina") ? Tools::getValue("pagina") : 1;
+		$registros = Tools::getValue("registros") ? Tools::getValue("registros") : 3;
+		$propiedades = Propiedad::getPropiedadesPaginada($having, $registros, $pagina);
+		$num_paginas = Propiedad::getNumPaginas($having, $registros);
 
 		$this->smarty->assign(array(
 			"having" => $having,
@@ -34,6 +37,11 @@ class IndexController extends Controller{
 			"id_provincia" => Tools::getValue("provincia"),
 			"municipios" => Municipio::getExistingMunicipiosByProvincias(true),
 			"id_municipio" => Tools::getValue("municipio"),
+			"preciomenor" => Tools::getValue("preciomenor"),
+			"preciomayor" => Tools::getValue("preciomayor"),
+			"registros" => $registros,
+			"pagina" => $pagina,
+			"num_paginas" => $num_paginas,
 		));
 
 		$this->tpl = "index.tpl";
@@ -69,6 +77,25 @@ class IndexController extends Controller{
 				$having .= "having municipio = $municipio";
 			else
 				$having .= " and municipio = $municipio";
+
+		$preciomenor = Tools::getValue("preciomenor") ? Tools::getValue("preciomenor") : 0;
+		$preciomayor = Tools::getValue("preciomayor") ? Tools::getValue("preciomayor") : 0;
+
+		
+		if($preciomenor > 0 || $preciomayor > 0){
+			if($preciomenor > 0 && $preciomayor == 0){
+				if($having == "")
+					$having .= "having precio >= $preciomenor";
+				else
+					$having .= " and precio >= $preciomenor";
+			}
+			else{
+				if($having == "")
+					$having .= "having precio >= $preciomenor and precio <= $preciomayor";
+				else
+					$having .= " and precio >= $preciomenor and precio <= $preciomayor";
+			}
+		}
 
 		if($having != "")
 			$having .= " and activa = 1";

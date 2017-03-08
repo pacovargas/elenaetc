@@ -98,3 +98,29 @@ h3{
 .grupo-filtros{
   margin-bottom: 10px;
 }
+
+#filtros input[type='text']{
+  border: 1px #CCC5CA solid;
+  width: 45%;
+}
+
+.labely{
+  width: auto !important;
+}
+
+.sin-resultados p{
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+#filtros label{
+  font-weight: normal;
+}
+
+.registros select{
+  width: 25% !important;
+}
+
+.paginacion p{
+  margin-bottom: 0;
+}

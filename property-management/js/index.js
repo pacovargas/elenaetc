@@ -41,5 +41,12 @@ $(function(){
 		refrescaMunicipios(municipios, 0);		
 	});
 
+	$("a.paginador").click(function(event) {
+		event.preventDefault();
+		var pagina = $(this).data('pagina');
+		$("#pagina").val(pagina);
+		$("#filtrar").click();
+	});
+
 	refrescaMunicipios(municipios, id_municipio);
 });
