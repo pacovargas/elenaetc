@@ -10,30 +10,40 @@
             <img src="{$base_url}img/mapa.jpg" class="img-responsive" />
         </div>
         <div class="col-sm-7 col-sm-offset-1">
+            {if $errores}
+	            <div class="error">
+	            	{$errores}
+	            </div>
+            {/if}
+            {if $exito}
+            	<div class="exito">
+            		{$exito}
+            	</div>
+            {/if}
             <form name="solicitud" id="solicitud" method="post" action="{$current_url}">
                 <div class="grupo-formulario">
                     <label for="asunto">Asunto</label>
-                    <input type="text" name="asunto" id="asunto" class="text-center" value="{$nombre} Referencia nº {$ref}" disabled="disabled" />
+                    <input type="text" name="asunto" id="asunto" class="text-center" value="{$prop} Referencia nº {$ref}" disabled="disabled" />
                 </div>
                 <div class="grupo-formulario">
                     <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" />
+                    <input type="text" name="nombre" id="nombre" value="{$nombre}" />
                 </div>
                 <div class="grupo-formulario">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" name="telefono" id="telefono" />
+                    <input type="text" name="telefono" id="telefono" value="{$telefono}" />
                 </div>
                 <div class="grupo-formulario">
                     <label for="email">Correo electrónico</label>
-                    <input type="text" name="email" id="email" />
+                    <input type="text" name="email" id="email" value="{$email}" />
                 </div>
                 <div class="grupo-formulario">
                     <label for="comentarios">Comentarios</label>
-                    <textarea name="comentarios" id="comentarios"></textarea>
+                    <textarea name="comentarios" id="comentarios">{$comentarios}</textarea>
                 </div>
                 <div class="grupo-formulario">
                     <input type="submit" name="enviar" id="enviar" value="Enviar" class="boton" />
-                    <button name="volver" id="volver" class="boton">Volver</button>
+                    <button name="volver" id="volver" class="boton" data-url="{$base_url}">Volver</button>
                 </div>
             </form>
         </div>
