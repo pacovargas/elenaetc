@@ -10,7 +10,7 @@
 	  	<span class="icon-bar"></span>
 	  	<span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="#"><img src="{$base_url}../img/logo-menu.jpg" alt="ETC" /></a>
+	  <a class="navbar-brand" href="{$base_url}../elena-franco-alvarez.php"><img src="{$base_url}../img/logo-menu.jpg" alt="ETC" /></a>
 	</div>
 
 	  <!-- Agrupar los enlaces de navegación, los formularios y cualquier
@@ -22,6 +22,7 @@
 	  		<li><a href="{$base_url}../como-lo-hacemos.php">cómo lo hacemos</a></li>
 	  		<li><a href="{$base_url}../para-quien-lo-hacemos.php">para quién lo hacemos</a></li>
 	  		<li><a href="{$base_url}../contacto.php">contacto</a></li>
+	  		<li><a href="{$base_url}../propiedades/">house management</a></li>
 	  	</ul>
 	  </div>
 
