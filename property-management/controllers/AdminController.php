@@ -67,7 +67,7 @@ class AdminController extends Controller{
 			if(Tools::getValue("accion-formulario") == "crear" || Tools::getValue("accion-formulario") == "actualizar"){
 				$errores = $this->validarFormulario($_POST["nombre"], $_POST["referencia"], $_POST["precio"]);
 				if($errores === false){
-					if(Tools::getValue("accion-formulario") == "crear")	
+					if(Tools::getValue("accion-formulario") == "crear")
 						$propiedad = new Propiedad($_POST["nombre"], $_POST["referencia"], $_POST["tipo"], $_POST["municipio"], $_POST["provincia"], $_POST["regimen"], $_POST["precio"]);
 					else
 						$propiedad = Propiedad::getPropiedadById(Tools::getValue('id_propiedad'));
@@ -191,18 +191,19 @@ class AdminController extends Controller{
 				else{
         			setcookie('etc_user', $user, time()+60*60*24*365);
         			setcookie('etc_passwd', sha1($passwd), time()+60*60*24*365);
-					if(User::isLogged())
-						$this->tpl = $admintpl;
-					else{
-						$errors = "<li>Nombre de usuario o contraseña incorrectos</li>";
-						$errors = "<ol>" . $errors . "</ol>";
-						$this->smarty->assign(array(
-							'errors' => $errors,
-							'user' => $user,
-							'passwd' => $passwd
-						));
-						$this->tpl = "login.tpl";
-					}
+        			Tools::redirect(Tools::getBaseUrl() . "admin/");
+					// if(User::isLogged())
+					// 	$this->tpl = "admin.tpl";
+					// else{
+					// 	$errors = "<li>Nombre de usuario o contraseña incorrectos</li>";
+					// 	$errors = "<ol>" . $errors . "</ol>";
+					// 	$this->smarty->assign(array(
+					// 		'errors' => $errors,
+					// 		'user' => $user,
+					// 		'passwd' => $passwd
+					// 	));
+					// 	$this->tpl = "login.tpl";
+					// }
 				}
 			}
 			else{
