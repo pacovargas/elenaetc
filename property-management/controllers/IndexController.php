@@ -47,34 +47,90 @@ class IndexController extends Controller{
 		$this->tpl = "index.tpl";
 	}
 
+	// private function getHaving(){
+	// 	$having = "";
+
+	// 	$tipo = Tools::getValue("tipo");
+	// 	if($tipo && intval($tipo) > 0)
+	// 		if($having == "")
+	// 			$having .= "having tipo = $tipo";
+	// 		else
+	// 			$having .= " and tipo = $tipo";
+
+	// 	$regimen = Tools::getValue("regimen");
+	// 	if($regimen && intval($regimen) > 0)
+	// 		if($having == "")
+	// 			$having .= "having regimen = $regimen";
+	// 		else
+	// 			$having .= " and regimen = $regimen";
+
+	// 	$provincia = Tools::getValue("provincia");
+	// 	if($provincia && intval($provincia) > 0)
+	// 		if($having == "")
+	// 			$having .= "having provincia = $provincia";
+	// 		else
+	// 			$having .= " and provincia = $provincia";
+
+	// 	$municipio = Tools::getValue("municipio");
+	// 	if($municipio && intval($municipio) > 0)
+	// 		if($having == "")
+	// 			$having .= "having municipio = $municipio";
+	// 		else
+	// 			$having .= " and municipio = $municipio";
+
+	// 	$preciomenor = Tools::getValue("preciomenor") ? Tools::getValue("preciomenor") : 0;
+	// 	$preciomayor = Tools::getValue("preciomayor") ? Tools::getValue("preciomayor") : 0;
+
+		
+	// 	if($preciomenor > 0 || $preciomayor > 0){
+	// 		if($preciomenor > 0 && $preciomayor == 0){
+	// 			if($having == "")
+	// 				$having .= "having precio >= $preciomenor";
+	// 			else
+	// 				$having .= " and precio >= $preciomenor";
+	// 		}
+	// 		else{
+	// 			if($having == "")
+	// 				$having .= "having precio >= $preciomenor and precio <= $preciomayor";
+	// 			else
+	// 				$having .= " and precio >= $preciomenor and precio <= $preciomayor";
+	// 		}
+	// 	}
+
+	// 	if($having != "")
+	// 		$having .= " and activa = 1";
+
+	// 	return $having;
+	// }
+
 	private function getHaving(){
 		$having = "";
 
 		$tipo = Tools::getValue("tipo");
 		if($tipo && intval($tipo) > 0)
 			if($having == "")
-				$having .= "having tipo = $tipo";
+				$having .= "where tipo = $tipo";
 			else
 				$having .= " and tipo = $tipo";
 
 		$regimen = Tools::getValue("regimen");
 		if($regimen && intval($regimen) > 0)
 			if($having == "")
-				$having .= "having regimen = $regimen";
+				$having .= "where regimen = $regimen";
 			else
 				$having .= " and regimen = $regimen";
 
 		$provincia = Tools::getValue("provincia");
 		if($provincia && intval($provincia) > 0)
 			if($having == "")
-				$having .= "having provincia = $provincia";
+				$having .= "where provincia = $provincia";
 			else
 				$having .= " and provincia = $provincia";
 
 		$municipio = Tools::getValue("municipio");
 		if($municipio && intval($municipio) > 0)
 			if($having == "")
-				$having .= "having municipio = $municipio";
+				$having .= "where municipio = $municipio";
 			else
 				$having .= " and municipio = $municipio";
 
@@ -85,13 +141,13 @@ class IndexController extends Controller{
 		if($preciomenor > 0 || $preciomayor > 0){
 			if($preciomenor > 0 && $preciomayor == 0){
 				if($having == "")
-					$having .= "having precio >= $preciomenor";
+					$having .= "where precio >= $preciomenor";
 				else
 					$having .= " and precio >= $preciomenor";
 			}
 			else{
 				if($having == "")
-					$having .= "having precio >= $preciomenor and precio <= $preciomayor";
+					$having .= "where precio >= $preciomenor and precio <= $preciomayor";
 				else
 					$having .= " and precio >= $preciomenor and precio <= $preciomayor";
 			}
@@ -99,6 +155,9 @@ class IndexController extends Controller{
 
 		if($having != "")
 			$having .= " and activa = 1";
+		else{
+			$having .= "where activa = 1";
+		}
 
 		return $having;
 	}

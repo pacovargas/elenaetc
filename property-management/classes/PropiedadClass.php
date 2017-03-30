@@ -217,6 +217,6 @@ class Propiedad{
 			$paginas = 0;
 		}
 
-		return intval($paginas);
+		return intval($paginas)+1;
 	}
 }
